@@ -65,7 +65,7 @@ header {
 
 .menu-header a {
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     margin: 0 15px;
     text-decoration: none;
     font-weight: 100;
@@ -86,7 +86,7 @@ header {
 }
 
 
-.tituloPrincipal {
+.titulo-inicio {
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -95,9 +95,6 @@ header {
     color: white;
     width: 100%;
     text-align: center;
-}
-
-.tituloPrincipal h1 {
     margin-bottom: -50px;
     font-size: 107px;
     letter-spacing: 1px;
@@ -116,6 +113,22 @@ header {
     z-index: 1;
 }
 
+/*Titulo pagina de nosotros*/
+.nosotros{
+    position: absolute;
+    bottom: 30px;
+    left: 51%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: white;
+    width: 100%;
+    text-align: start;
+    margin-bottom: -50px;
+    font-size: 107px;
+    letter-spacing: 1px;
+    font-family: 'EditorialOld';
+    font-weight: 100;
+}
 
 /* ---------------------------- SEGUNDA PARTE ---------------------------- */
 .segunda-seccion {
@@ -412,7 +425,7 @@ header {
     padding: 100px 5% 100px 5%;
     gap: 40px;
     flex-wrap: wrap;
-        color: black;
+    color: black;
 }
 
 .frase7{
@@ -438,15 +451,15 @@ header {
 .menu-links{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 11px;
     width: 100%;
 }
 
 .menu-enlace-footer {
-    font-size: 14px;
+    font-size: 12px;
     color: black;
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 1px;
     transition: color 0.5s;
     text-align: right; 
@@ -497,7 +510,7 @@ header {
     color: black;
 }
 
-.copyRight {
+.copyRight p{
     width: 100%;
     text-align: start;
     padding: 10px 0px 30px 0px;

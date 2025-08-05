@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Nosotros</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="img/favicon.png" rel="icon">
+    <link href="css/nosotros/contador.css" rel="stylesheet">
+    <link href="css/nosotros/tabs.css" rel="stylesheet">
+    <link href="css/inicio.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/nosotros/tira.css">
+
+</head>
+
+<body>
+
+    <!--HEADER-->
+    <header>
+        <div class="contenedor-header">
+            <a href="./inicio.html">
+                <img src="./img/logo-blanco.png" class="logo" alt="logo hotel">
+            </a>
+            <nav class="menu-header">
+                <a class="menu-enlace" href="">INICIO</a>
+                <a class="menu-enlace" href="./nosotros.html">NOSOTROS</a>
+                <a class="menu-enlace" href="">SERVICIOS</a>
+                <a class="menu-enlace" href="">HABITACIONES</a>
+                <a class="menu-enlace" href="">CONTACTO</a>
+                <a class="menu-enlace" href="">GALERÍA</a>
+                <a class="menu-enlace" href="">RESEÑAS</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <div class="contenedor-fondo">
+        <div>
+            <img src="img/hotel.webp" alt="hotel" class="imagen-fondo">
+        </div>
+        <div class="tituloPrincipal">
+            <h1 class="nosotros">NOSOTROS</h1>
+        </div>
+    </div>
+
+    <!--FIN HEADER-->
+
+    <!-- TABS-->
+    <section id="seccion-tabs">
+        <div class="pt-5"></div>
+        <div class="tab tam1">
+            <button class="tablinks" onclick="opciones(event, 'historia') ">Historia</button>
+            <button class="tablinks" onclick="opciones(event, 'mision') ">Misión</button>
+            <button class="tablinks" onclick="opciones(event, 'vision') ">Visión</button>
+            <button class="tablinks" onclick="opciones(event, 'valores') ">Valores</button>
+        </div>
+        <div id="historia" class="tabcontent">
+            <h3>Empresa XYZ</h3>
+            <p>
+                En el mundo digital es muy importante que sepas redactar la historia de tu empresa de una forma atractiva.
+                El objetivo es dar a conocer tu trayectoria profesional, así como los valores de tu negocio entre tus
+                clientes potenciales para crear imagen de
+                marca y diferenciarte de la competencia.
+            </p>
+            <img src="imagenes/historia.png" alt="historia" class="img-fluid">
+        </div>
+        <div id="mision" class="tabcontent">
+            <h3>Empresa XYZ</h3>
+            <p class="text-left ">
+                La misión describe el motivo o la razón de ser de una organización, empresa o institución. Se enfoca en los
+                objetivos a cumplir en el presente. Debe estar definida de manera precisa y concreta para guiar al grupo de
+                trabajo en el día a día. Por ejemplo:
+                La misión de la compañía es mejorar la calidad de los automóviles.
+            </p>
+            <img src="imagenes/mision.png" alt="mision" class="img-fluid">
+        </div>
+        <div id="vision" class="tabcontent">
+            <h3>Empresa XYZ</h3>
+            <p class="text-left ">
+                La visión empresarial es la capacidad de proyectar el futuro de una empresa. En un concepto más terminado.
+                Es una declaración que indica hacia dónde se dirige la empresa a largo plazo, o qué es aquello en lo que
+                pretende convertirse en el futuro.
+            </p>
+            <img src="imagenes/vision.png" alt="vision" class="img-fluid">
+        </div>
+        <div id="valores" class="tabcontent">
+            <h3>Valores de la empresa </h3>
+            <p class="text-left ">
+                Los valores de una empresa son principios éticos y creencias fundamentales que guían su comportamiento y
+                cultura. Ejemplos de valores empresariales incluyen la integridad, la innovación, la responsabilidad, el
+                trabajo en equipo y la orientación al cliente.
+            </p>
+            <img src="imagenes/valores.jpg" alt="valores" class="img-fluid">
+        </div>
+    </section>
+
+    <!-- TIRA FOTOGRÁFICA -->
+    <section id="seccion-tira" class="my-5">
+        <div id="owl-demo" class="owl-carousel text-center">
+            <div class="item">
+                <div class="">
+                    <!-- lazyOwl es una instruccion de JS para agilizar la carga de las fotos -->
+                    <img class="lazyOwl img-fluid rounded-circle" data-src="imagenes/perfil1.jpg" alt="perfil1">
+                </div>
+                <div class="">
+                    <h4 class="">Desarrollador Web</h4>
+                    <p class="p1 text-center">
+                        Lorem ipsum dolor amet,consectetur adipisicing elit, sed do eiusmod tempor.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="">
+                    <img class="lazyOwl img-fluid rounded-circle" data-src="img/galeria1.jpg" alt="perfil2">
+                </div>
+                <div class="">
+                    <h4 class="">Diseñadora Web</h4>
+                    <p class="p1 text-center">
+                        On the other hand, we denounce with righteous indignation and dislike men.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="">
+                    <img class="lazyOwl img-fluid rounded-circle" data-src="imagenes/perfil3.jpg" alt="perfil3">
+                </div>
+                <div class="">
+                    <h4 class="">D. Audiovisual</h4>
+                    <p class="p1 text-center">
+                        On the other hand, we denounce with righteous indignation and dislike men.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="">
+                    <img class="lazyOwl img-fluid rounded-circle" data-src="imagenes/perfil4.jpg" alt="perfil4">
+                </div>
+                <div class="">
+                    <h4 class="">Programadora Web</h4>
+                    <p class="p1 text-center">
+                        Lorem ipsum dolor amet,consectetur adipisicing elit, sed do eiusmod mendd.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="">
+                    <img class="lazyOwl img-fluid rounded-circle" data-src="imagenes/perfil5.jpg" alt="perfil5">
+                </div>
+                <div class="">
+                    <h4 class="">Dibujante</h4>
+                    <p class="p1 text-center">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="">
+                    <img class="lazyOwl img-fluid rounded-circle" data-src="imagenes/perfil6.jpg" alt="perfil6">
+                </div>
+                <div class="">
+                    <h4 class="">Animadora</h4>
+                    <p class="p1 text-center">
+                        On the other hand, we denounce with righteous indignation and dislike men.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="">
+                    <img class="lazyOwl img-fluid rounded-circle" data-src="imagenes/perfil7.jpg" alt="perfil7">
+                </div>
+                <div class="">
+                    <h4 class="">Marketing Digital</h4>
+                    <p class="p1 text-center">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="">
+                    <img class="lazyOwl img-fluid rounded-circle" data-src="imagenes/perfil8.jpg" alt="perfil8">
+                </div>
+                <div class="cau_left">
+                    <h4 class="">D. Instruccional</h4>
+                    <p class="p1 text-center">
+                        On the other hand, we denounce with righteous indignation and dislike men.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="">
+                    <img class="lazyOwl img-fluid rounded-circle" data-src="imagenes/perfil9.jpg" alt="perfil9">
+                </div>
+                <div class="">
+                    <h4 class="">Tecnologo Virtual</h4>
+                    <p class="p1 text-center">
+                        Lorem ipsum dolor amet,consectetur adipisicing elit, sed do eiusmod tempor.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="">
+                    <img class="lazyOwl img-fluid rounded-circle" data-src="imagenes/perfil10.jpg" alt="perfil10">
+                </div>
+                <div class="">
+                    <h4 class="">Ing. Informática</h4>
+                    <p class="p1 text-center">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="">
+                    <img class="lazyOwl img-fluid rounded-circle" data-src="imagenes/perfil11.jpg" alt="perfil11">
+                </div>
+                <div class="">
+                    <h4 class="">Publicista</h4>
+                    <p class="p1 text-center">
+                        On the other hand, we denounce with righteous indignation and dislike men.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="">
+                    <img class="lazyOwl img-fluid rounded-circle" data-src="imagenes/perfil12.jpg" alt="perfil12">
+                </div>
+                <div class="">
+                    <h4 class="">Desarrollador Aps</h4>
+                    <p class="p1 text-center">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- CONTADOR NUMÉRICO -->
+    <section id="seccion-contador" class="my-5">
+        <section class="ftco-counter" id="section-counter">
+            <div class="container">
+                <h2 class="titulos text-center">Estadísticas web</h2>
+                <div class="row pt-5">
+                    <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap">
+                        <div class=" block-18 text-center ">
+                            <div class="text ">
+                                <strong class="number " data-number="10 ">0</strong>
+                            </div>
+                            <div class="text-black ">
+                                <h5>Años de Experiencia</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate ">
+                        <div class="block-18 text-center ">
+                            <div class="text ">
+                                <strong class="number " data-number="3000 ">0</strong>
+                            </div>
+                            <div class="text-black ">
+                                <h5>Proyectos Completados</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate ">
+                        <div class="block-18 text-center ">
+                            <div class="text ">
+                                <strong class="number " data-number="5000 ">0</strong>
+                            </div>
+                            <div class="text-black ">
+                                <h5>Clientes Satisfechos</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate ">
+                        <div class="block-18 text-center ">
+                            <div class="text ">
+                                <strong class="number " data-number="24 ">0</strong>
+                            </div>
+                            <div class="text-black ">
+                                <h5>Equipo de trabajo</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="seccion-footer" class="mt-5">
+        <footer>
+            <div class="septima-seccion">
+                <div class="frase7">
+                    <h2>Una experiencia que <span class="span"><br>nunca olvidarás</span></h2>
+                </div>
+                <div class="footerColumna">
+                    <div class="menu-links">
+                        <a class="menu-enlace-footer" href="">INICIO</a>
+                        <a class="menu-enlace-footer" href="">NOSOTROS</a>
+                        <a class="menu-enlace-footer" href="">SERVICIOS</a>
+                        <a class="menu-enlace-footer" href="">HABITACIONES</a>
+                        <a class="menu-enlace-footer" href="">CONTACTO</a>
+                        <a class="menu-enlace-footer" href="">GALERÍA</a>
+                        <a class="menu-enlace-footer" href="">RESEÑAS</a>
+                    </div>
+                    <div class="redesColumna">
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-bounce"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="seccion-titulo-footer">
+            <div class="titulo-footer">
+                <h1>HOTEL BRISA DEL BOSQUE</h1>
+            </div>
+            <div class="copyRight">
+                <p>Todos los derechos reservados Hotel Brisa del Bosque</p>
+            </div>
+        </div>
+    </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "
+            integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+            crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+
+
+        <!-- programacion lista de la tira -->
+        <script src="js/tiraFoto/tira.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#owl-demo").owlCarousel({
+                    /*columnas de fotos */
+                    items: 4,
+                    /*carga rapida de fotos*/
+                    lazyLoad: true,
+                    /*carga automatica de la tira*/
+                    autoPlay: true,
+                    navigation: true,
+                    /*permite ocultar los textos prev y next */
+                    navigationText: ["", ""],
+                    /*permite ir del final al inicio*/
+                    rewindNav: false,
+                    /*valores por defecto. si le ponen los 3 en valor true aparecen los numeros 1 2 3 para navegar*/
+                    scrollPerPage: false,
+                    pagination: false,
+                    paginationNumbers: false,
+                });
+            });
+        </script>
+
+        <!-- CONTADOR NUMERICO -->
+
+        <script src="js/contador/jquery-migrate-3.0.1.min.js "></script>
+        <script src="js/contador/jquery.waypoints.min.js "></script>
+        <script src="js/contador/jquery.stellar.min.js "></script>
+        <script src="js/contador/jquery.animateNumber.min.js "></script>
+        <script src="js/contador/bootstrap-datepicker.js "></script>
+        <script src="js/contador/jquery.timepicker.min.js "></script>
+        <script src="js/contador/jquery.magnific-popup.min.js "></script>
+        <script src="js/contador/scrollax.min.js "></script>
+
+        <script src="js/contador/contador.js "></script>
+        <script src="js/tabs.js"></script>
+
+</body>
+
+</html>
