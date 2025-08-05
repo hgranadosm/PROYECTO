@@ -12,6 +12,7 @@
     <link href="css/nosotros/tabs.css" rel="stylesheet">
     <link href="css/inicio.css" rel="stylesheet">
     <link rel="stylesheet" href="css/nosotros/tira.css">
+    <link rel="stylesheet" href="css/nosotros/suscripcion.css">
 
 </head>
 
@@ -310,6 +311,21 @@
         </section>
     </section>
 
+    <!-- FORMULARIO -->
+    <section class="container-fluid seccionInscripcion py-5">
+        <div class="container text-center">
+            <h2 class="pb-5">Suscríbete para conseguir
+                ofertas mensuales</h2>
+
+            <form id="form2">
+                <!-- el name es el que se pone en el temaplate de emial.js-->
+                <input class="email" name="email" id="inscriptionTxt" type="email" placeholder="Tu email">
+                <input id="btnSend" type="button" value="Enviar">
+                <p id="mensajeAlert"></p>
+            </form>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <section id="seccion-footer" class="mt-5">
         <footer>
@@ -377,6 +393,7 @@
             });
         </script>
 
+
         <!-- CONTADOR NUMERICO -->
 
         <script src="js/contador/jquery-migrate-3.0.1.min.js "></script>
@@ -390,6 +407,14 @@
 
         <script src="js/contador/contador.js "></script>
         <script src="js/tabs.js"></script>
+
+        <script src="js/suscripcion/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+    
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script src="js/suscripcion/form2.js"></script>
 
 </body>
 

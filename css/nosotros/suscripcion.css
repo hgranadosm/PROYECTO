@@ -1,0 +1,21 @@
+
+.seccionInscripcion {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 450px;
+    background-attachment: fixed;
+}
+.seccionInscripcion h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 60px;
+    padding-top: 100px;
+}
+.seccionInscripcion .email {
+    width: 200px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
