@@ -8,6 +8,7 @@
     <link href="img/favicon.png" rel="icon">
     <link href="css/inicio.css" rel="stylesheet">
     <link rel="stylesheet" href="css/contacto/formContacto.css">
+    <link rel="stylesheet" href="css/contacto/ubicacion.css">
 </head>
 <body>
 
@@ -105,6 +106,33 @@
         </div>
     </section>
 
+        <!-- MAPA -->
+
+    <div>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7866.637075725244!2d-83.972075!3d9.6538!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMzknMTMuNyJOIDgzwrA1OCcxMC4yIlc!5e0!3m2!1ses-419!2scr!4v1754500077236!5m2!1ses-419!2scr" width="90%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+    <!-- SECCIÓN CARRUSEL DE FOTOGRAFÍAS -->
+    <section id="seccion-carrusel">
+        <div class="carrousel-bg">
+            <img src="img/favicon.png" name="thumb" alt="icono carrusel"> <br><br>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue nibh, mollis in finibus id, mollis non dui. Praesent vel eleifend ante. Praesent vulputate turpis varius consequat luctus. Ut ut eros elementum, venenatis urna sit amet, mattis libero. Praesent id vehicula felis. Suspendisse scelerisque vitae lectus et lobortis. Aenean auctor consectetur lorem non pretium.
+                </p>
+                <div></div>
+                <button onclick="cambiar(-1)">Anterior</button>
+                <button onclick="cambiar(1)">Siguiente</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- cierre del container -->
+    </div>
+   
 
 
          <!-- FOOTER -->
@@ -142,8 +170,9 @@
         </section>
         <!-- FIN FOOTER -->
 
-        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="js/contacto/formContacto.js"></script>
+    <script src="js/contacto/carousel.js"></script>
     
 </body>
 </html>
