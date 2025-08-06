@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitaciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="img/favicon.png" rel="icon">
+    <link href="css/inicio.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/habitaciones/combo2.css">
+</head>
+<body>
+
+    
+      <!--HEADER-->
+      <header>
+        <div class="contenedor-header">
+            <a href="./inicio.html">
+                <img src="./img/logo-blanco.png" class="logo" alt="logo hotel">
+            </a>
+            <nav class="menu-header">
+                <a class="menu-enlace" href="./inicio.html">INICIO</a>
+                <a class="menu-enlace" href="./nosotros.html">NOSOTROS</a>
+                <a class="menu-enlace" href="./servicios.html">SERVICIOS</a>
+                <a class="menu-enlace" href="./habitaciones.html">HABITACIONES</a>
+                <a class="menu-enlace" href="./contacto.html">CONTACTO</a>
+                <a class="menu-enlace" href="./galeria.html">GALERÍA</a>
+                <a class="menu-enlace" href="./resenas.html">RESEÑAS</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contenedor-fondo">
+        <div>
+            <img src="img/hotel.webp" alt="hotel" class="imagen-fondo">
+        </div>
+        <div>
+            <h1 class="titulo-pagina">HABITACIONES</h1>
+        </div>
+    </div>
+
+    <!--FIN HEADER-->
+
+
+    <section class="container">
+        <div class="row">
+            <div class="col-sm-5 col-md-5 col-lg-5">
+                <div class="inputs pt-4">
+                    <h2 class="pb-3">Seleccione el vehículo</h2>
+                    <h4>Modelo</h4>
+
+                    <!-- combo1 -->
+                    <select name="modelo" id="modelo">
+                        <option selected disabled>Seleccione un modelo:</option>
+                        <option>Fronteir</option>
+                        <option>Kicks</option>
+                        <option>Sentra</option>
+                        <option>Qashqai</option>
+                        <option>Murano</option>
+                    </select>
+
+                    <div class="pt-3"></div>
+                    <h4>Versión</h4>
+                    <!-- combo2 -->
+                    <select name="version" id="version">
+                        <option selected disabled>Seleccione una versión:</option>
+                        <option>4x2</option>
+                        <option>4x4</option>
+                        <option>4x5</option>
+                    </select>
+
+                    <!-- boton-->
+                    <div class="pt-5">
+                        <button class="btn btn-danger btn-lg mt-3" onclick="calcular()">Calcular</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- foto modelo -->
+            <div class="col-sm-7 col-md-7 col-lg-7">
+                <div class="text-center logo2 pt-5">
+                    <img src="imagenes/autos.jpg" alt="Vehiculo" id="imagen">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+     <!-- FOOTER -->
+     <section id="seccion-footer" class="mt-5">
+        <footer>
+            <div class="septima-seccion">
+                <div class="frase7">
+                    <h2>Una experiencia que <span class="span"><br>nunca olvidarás</span></h2>
+                </div>
+                <div class="footerColumna">
+                    <div class="menu-links">
+                        <a class="menu-enlace-footer" href="./inicio.html">INICIO</a>
+                        <a class="menu-enlace-footer" href="./nosotros.html">NOSOTROS</a>
+                        <a class="menu-enlace-footer" href="./servicios.html">SERVICIOS</a>
+                        <a class="menu-enlace-footer" href="./habitaciones.html">HABITACIONES</a>
+                        <a class="menu-enlace-footer" href="./contacto.html">CONTACTO</a>
+                        <a class="menu-enlace-footer" href="./galeria.html">GALERÍA</a>
+                        <a class="menu-enlace-footer" href="./resenas.html">RESEÑAS</a>
+                    </div>
+                    <div class="redesColumna">
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-bounce"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="seccion-titulo-footer">
+            <div class="titulo-footer">
+                <h1>HOTEL BRISA DEL BOSQUE</h1>
+            </div>
+            <div class="copyRight">
+                <p>Todos los derechos reservados Hotel Brisa del Bosque</p>
+            </div>
+        </div>
+    </section>
+    <!-- FIN FOOTER -->
+
+
+
+    <script src="js/habitaciones/combo2.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    
+</body>
+</html>

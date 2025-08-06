@@ -24,9 +24,6 @@ function init() {
             alerta.classList.add('alertaVerde');
             alerta.classList.remove('alertaRoja');
 
-            //service ID/template ID/ID form/public key cuenta
-            //el id del formulario es #form
-            //emailjs.sendForm('service_x5asf6h', 'template_hsp11hl', '#inscription', 'wptpEuD87H_TTMDE8');
             emailjs.sendForm('service_7gptqmc', 'template_joz8ymb', '#form2', 'l_I6FFQCf9gyONQxk');
             cleanInputs();
         }
