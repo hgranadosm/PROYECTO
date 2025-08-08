@@ -11,6 +11,7 @@
     <link href="css/nosotros/contador.css" rel="stylesheet">
     <link href="css/nosotros/tabs.css" rel="stylesheet">
     <link href="css/inicio.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/nosotros/tira.css">
     <link rel="stylesheet" href="css/nosotros/suscripcion.css">
 
@@ -47,13 +48,14 @@
 
     <!--FIN HEADER-->
 
-    
+
     <div class="segunda-seccion">
         <div class="frase1">
             <h2>El origen de <span class="span"><br>brisa del bosque</span></h2>
         </div>
         <div class="parrafo">
-            <p data-translate="parrafoEscapada">  Enclavado en el corazón del bosque nuboso costarricense, Hotel Brisa del Bosque nació del sueño de una
+            <p data-translate="parrafoEscapada"> Enclavado en el corazón del bosque nuboso costarricense, Hotel Brisa
+                del Bosque nació del sueño de una
                 familia amante de la naturaleza, el silencio y la elegancia simple. Inspirados por el deseo de crear un
                 refugio que combinara lujo y sostenibilidad, construimos este espacio para que los visitantes pudieran
                 reconectarse con lo esencial: la calma, el aire puro y la belleza del entorno. Desde sus inicios, cada
@@ -93,7 +95,7 @@
         </div>
     </section>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var misionTab = document.getElementById('mision');
             var visionTab = document.getElementById('vision');
             var valoresTab = document.getElementById('valores');
@@ -184,14 +186,19 @@
 
     <!-- FORMULARIO -->
     <section class="container-fluid seccionInscripcion py-5">
-        <div class="container text-center">
-            <h2 class="pb-5">Suscríbete para conseguir
-                ofertas mensuales</h2>
+        <div class=" text-center">
+            <div>
+                <h2 class="titulo-suscripcion"><span class="span">Suscríbete</span></h2>
+                <p>Sé el primero en conocer nuestras experiencias y servicios exclusivos</p>
+            </div>
 
             <form id="form2">
-                <!-- el name es el que se pone en el temaplate de emial.js-->
-                <input class="email" name="email" id="inscriptionTxt" type="email" placeholder="Tu email">
-                <input id="btnSend" type="button" value="Enviar">
+                <!-- el name lo pongo en el temaplate de emial.js-->
+                <input class="email" name="email" id="inscriptionTxt" type="email" placeholder="Correo">
+                <div class="boton-icono" id="btnSend">
+                    <input class="boton-suscripcion"  type="button" value="ENVIAR">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
                 <p id="mensajeAlert"></p>
             </form>
         </div>

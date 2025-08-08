@@ -1,21 +1,79 @@
+.seccionInscripcion .email::placeholder {
+    color: #888;
+    opacity: 1;
+}
+.titulo-suscripcion{
+    color: #333;
+    font-weight: bold;
+}
 
 .seccionInscripcion {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner3.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
     height: 450px;
-    background-attachment: fixed;
 }
+
 .seccionInscripcion h2 {
-    color: #fff;
     font-weight: bold;
     font-size: 60px;
     padding-top: 100px;
 }
+
 .seccionInscripcion .email {
-    width: 200px;
     padding: 8px;
     border: none;
     outline: none;
-    border-radius: 2px;
+    color: #333;
+    background-color: #f1ebe3;
+    border-bottom: 1px solid #333;
+}
+
+#form2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-icono{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton-suscripcion{
+    width: auto;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: inline-block;
+    line-height: 1;
+}
+
+.boton-icono i{
+    display: flex;
+    font-size: 10px;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(238, 190, 101);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.boton-icono i:hover{
+    font-size: 10px;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(194, 155, 84);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
