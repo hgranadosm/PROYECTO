@@ -27,7 +27,7 @@ body{
     height: 100vh;
     width: 100%;
     background-image: url("../img/hotel.webp");
-    background-size: contain; /* 👈 Esto hace que no se corte */
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -113,7 +113,6 @@ header {
     z-index: 1;
 }
 
-/*Titulo pagina de nosotros*/
 .titulo-pagina{
     position: absolute;
     bottom: 30px;
@@ -256,7 +255,7 @@ header {
 /* ---------------------------- CUARTA PARTE ---------------------------- */
 
 .contenedor-cuarta-seccion{
-    position: relative; /* 🔥 necesario para posicionar el texto encima */
+    position: relative; 
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -515,4 +514,116 @@ header {
     text-align: start;
     padding: 10px 0px 30px 0px;
     font-size: 14px;
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 20px;
+}
+.language-switch {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 24px;
+}
+.language-switch input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.switch-bg {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #27ae60;
+    border-radius: 24px;
+    transition: background-color .4s;
+}
+.language-switch input:checked + .switch-bg {
+    background-color: #e74c3c;
+}
+html[lang="en"] .switch-bg {
+    background-color: #e74c3c !important;
+}
+html[lang="es"] .switch-bg {
+    background-color: #27ae60 !important;
+}
+.switch-knob {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform .4s;
+}
+.language-switch input:checked + .switch-bg + .switch-knob {
+    transform: translateX(26px);
+}
+#langEs {
+    font-weight: bold;
+    color: #7c745c;
+}
+#langEn {
+    font-weight: bold;
+    color: #7c745c;
+}
+
+.language-switch {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 24px;
+}
+.language-switch input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.language-switch span:first-of-type {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #27ae60; 
+    border-radius: 24px;
+    transition: background-color .4s;
+}
+.language-switch input:checked + span:first-of-type {
+    background-color: #e74c3c;
+}
+html[lang="en"] .language-switch span:first-of-type {
+    background-color: #e74c3c !important;
+}
+html[lang="es"] .language-switch span:first-of-type {
+    background-color: #27ae60 !important;
+}
+.language-switch span:last-of-type {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform .4s;
+}
+.language-switch input:checked + span:first-of-type + span:last-of-type {
+    transform: translateX(26px);
+}
+#langEs {
+    font-weight: bold;
+    color: #7c745c;
+}
+#langEn {
+    font-weight: bold;
+    color: #7c745c;
 }

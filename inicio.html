@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,14 +19,24 @@
                 <img src="./img/logo-blanco.png" class="logo" alt="logo hotel">
             </a>
             <nav class="menu-header">
-                <a class="menu-enlace" href="./inicio.html">INICIO</a>
-                <a class="menu-enlace" href="./nosotros.html">NOSOTROS</a>
-                <a class="menu-enlace" href="./servicios.html">SERVICIOS</a>
-                <a class="menu-enlace" href="./habitaciones.html">HABITACIONES</a>
-                <a class="menu-enlace" href="./contacto.html">CONTACTO</a>
-                <a class="menu-enlace" href="./galeria.html">GALERÍA</a>
-                <a class="menu-enlace" href="./resenas.html">RESEÑAS</a>
+                <a class="menu-enlace" href="./inicio.html" data-translate="menuInicio">INICIO</a>
+                <a class="menu-enlace" href="./nosotros.html" data-translate="menuNosotros">NOSOTROS</a>
+                <a class="menu-enlace" href="./servicios.html" data-translate="menuServicios">SERVICIOS</a>
+                <a class="menu-enlace" href="./habitaciones.html" data-translate="menuHabitaciones">HABITACIONES</a>
+                <a class="menu-enlace" href="./contacto.html" data-translate="menuContacto">CONTACTO</a>
+                <a class="menu-enlace" href="./galeria.html" data-translate="menuGaleria">GALERÍA</a>
+                <a class="menu-enlace" href="./resenas.html" data-translate="menuResenas">RESEÑAS</a>
             </nav>
+            <div class="switch-container">
+                <span id="langEs">ES</span>
+                <label class="language-switch" for="languageSwitch">
+                    <input type="checkbox" id="languageSwitch" onclick="changeLanguage()">
+                    <span class="switch-bg"></span>
+                    <span class="switch-knob"></span>
+                </label>
+                <span id="langEn">EN</span>
+            </div>
+            </div>
         </div>
     </header>
 
@@ -35,7 +45,7 @@
             <img src="img/hotel.webp" alt="hotel" class="imagen-fondo">
         </div>
         <div>
-            <h1 class="titulo-inicio">HOTEL BRISA DEL BOSQUE</h1>
+            <h1 class="titulo-inicio" data-translate="hotelTitulo">HOTEL BRISA DEL BOSQUE</h1>
         </div>
     </div>
 
@@ -43,12 +53,10 @@
 
     <div class="segunda-seccion">
         <div class="frase1">
-            <h2 class="">Tu <span class="span">escapada de lujo</span><br> para desconectar <br> y reconectar</h2>
+            <h2 class="" data-translate="fraseEscapada">Tu <span class="span" data-translate="fraseEscapadaSpan">escapada de lujo</span><br> para desconectar <br> y reconectar</h2>
         </div>
         <div class="parrafo">
-            <p>Hotel Brisa del Bosque es un exclusivo refugio de montaña ubicado en el corazón de la naturaleza
-                costarricense. Rodeado de bosques nublados y aire puro, nuestro hotel ofrece el escenario ideal para una
-                escapada de lujo, descanso y conexión con la tranquilidad del bosque.</p>
+            <p data-translate="parrafoEscapada">Hotel Brisa del Bosque es un exclusivo refugio de montaña ubicado en el corazón de la naturaleza costarricense. Rodeado de bosques nublados y aire puro, nuestro hotel ofrece el escenario ideal para una escapada de lujo, descanso y conexión con la tranquilidad del bosque.</p>
         </div>
     </div>
 
@@ -58,119 +66,13 @@
         </video>
     </div>
 
-    <!-- GALERIA FOTOGRAFICA -->
-    <section id="s2" class="container-fluid fondo2 text-center pt-5">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="tam1">Galería de Videos de Bodas</h2>
-
-                <div class="container-fluid pt-5">
-                    <div class="tz-gallery">
-                        <div class="row justify-content-center">
-                            <!-- Video 1 -->
-                            <div class="col-sm-6 col-md-3 mb-4">
-                                <div class="video-thumb" data-video="videos/video1.mp4">
-                                    <video width="100%" class="img-fluid" muted>
-                                        <source src="videos/video1.mp4" type="video/mp4">
-                                        Tu navegador no soporta el video.
-                                    </video>
-                                    <h3 class="pt-3">Boda 1</h3>
-                                </div>
-                            </div>
-                            <!-- Video 7 -->
-                            <div class="col-sm-6 col-md-3 mb-4">
-                                <div class="video-thumb" data-video="videos/video7.mp4">
-                                    <video width="100%" class="img-fluid" muted>
-                                        <source src="videos/video7.mp4" type="video/mp4">
-                                        Tu navegador no soporta el video.
-                                    </video>
-                                    <h3 class="pt-3">Boda 2</h3>
-                                </div>
-                            </div>
-                            <!-- Video 6 -->
-                            <div class="col-sm-6 col-md-3 mb-4">
-                                <div class="video-thumb" data-video="videos/video6.mp4">
-                                    <video width="100%" class="img-fluid" muted>
-                                        <source src="videos/video6.mp4" type="video/mp4">
-                                        Tu navegador no soporta el video.
-                                    </video>
-                                    <h3 class="pt-3">Boda 3</h3>
-                                </div>
-                            </div>
-                            <!-- Video 4 -->
-                            <div class="col-sm-6 col-md-3 mb-4">
-                                <div class="video-thumb" data-video="videos/video4.mp4">
-                                    <video width="100%" class="img-fluid" muted>
-                                        <source src="videos/video4.mp4" type="video/mp4">
-                                        Tu navegador no soporta el video.
-                                    </video>
-                                    <h3 class="pt-3">Boda 4</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="index.html" class="btn btn-danger btn-lg">Volver</a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox de Video -->
-    <div id="videoLightbox"
-        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center;">
-        <span id="closeLightbox"
-            style="position:absolute; top:30px; right:50px; font-size:3rem; color:white; cursor:pointer; z-index:10001;">&times;</span>
-        <video id="lightboxVideo" controls autoplay
-            style="max-width:90vw; max-height:80vh; z-index:10000; background:black;"></video>
-    </div>
-
-
-    <script>
-        // Lightbox de video
-        const thumbs = document.querySelectorAll('.video-thumb');
-        const lightbox = document.getElementById('videoLightbox');
-        const lightboxVideo = document.getElementById('lightboxVideo');
-        const closeBtn = document.getElementById('closeLightbox');
-
-        thumbs.forEach(thumb => {
-            thumb.addEventListener('click', function () {
-                const videoSrc = this.getAttribute('data-video');
-                lightboxVideo.src = videoSrc;
-                lightbox.style.display = 'flex';
-                lightboxVideo.play();
-            });
-        });
-
-        closeBtn.addEventListener('click', function () {
-            lightbox.style.display = 'none';
-            lightboxVideo.pause();
-            lightboxVideo.src = '';
-        });
-
-        // Cerrar lightbox al hacer click fuera del video
-        lightbox.addEventListener('click', function (e) {
-            if (e.target === lightbox) {
-                lightbox.style.display = 'none';
-                lightboxVideo.pause();
-                lightboxVideo.src = '';
-            }
-        });
-    </script>
-
-
     <!--Tercer seccion-->
-
-
     <div class="frase2">
-        <h2>Nuestros <span class="span">Servicios</span></h2>
+        <h2 data-translate="nuestrosServicios">Nuestros <span class="span" data-translate="serviciosSpan">Servicios</span></h2>
     </div>
     <div class="tercer-seccion">
         <div class="parrafo2">
-            <p>Tu comodidad y preferencias son nuestra máxima prioridad. Ya sea que busques completa privacidad o desees
-                explorar nuestra lista cuidadosamente seleccionada de experiencias exclusivas, estamos aquí para crear
-                una escapada personalizada que se ajuste perfectamente a tus necesidades..</p>
+            <p data-translate="parrafoServicios">Tu comodidad y preferencias son nuestra máxima prioridad. Ya sea que busques completa privacidad o desees explorar nuestra lista cuidadosamente seleccionada de experiencias exclusivas, estamos aquí para crear una escapada personalizada que se ajuste perfectamente a tus necesidades..</p>
         </div>
         <div class="contenedor-imagenes">
             <div class="imagen-box">
@@ -192,7 +94,7 @@
             <img src="./img/bosque.jpg" alt="bosque">
         </div>
         <div class="frase-cuarta-seccion">
-            <h2>"Un <span class="span">refugio privado</span><br>inmerso en la naturaleza."</h2>
+            <h2 data-translate="fraseRefugio">"Un <span class="span" data-translate="refugioSpan">refugio privado</span><br>inmerso en la naturaleza."</h2>
         </div>
     </div>
 
@@ -200,12 +102,10 @@
     <!--Quinta seccion-->
     <div class="contenedor-quinta-seccion">
         <div>
-            <h2>Nuestra <span class="span">Galería</span></h2>
+            <h2 data-translate="nuestraGaleria">Nuestra <span class="span" data-translate="galeriaSpan">Galería</span></h2>
         </div>
         <div class="parrafo-galeria">
-            <p>Explora nuestra galería para descubrir la belleza y el encanto de Hotel Brisa del Bosque. Desde
-                interiores acogedores hasta paisajes de montaña impresionantes, nuestras fotos muestran las
-                características únicas y los momentos inolvidables que te esperan..</p>
+            <p data-translate="parrafoGaleria">Explora nuestra galería para descubrir la belleza y el encanto de Hotel Brisa del Bosque. Desde interiores acogedores hasta paisajes de montaña impresionantes, nuestras fotos muestran las características únicas y los momentos inolvidables que te esperan..</p>
         </div>
         <div class="contenedor-imagenes-galeria">
             <div class="galeria-contenedor-img">
@@ -235,17 +135,14 @@
         <div class="right-side">
             <div class="right-content">
                 <div>
-                    <h2>Donde <span class="span">Encontrarnos?</span></h2>
+                    <h2 data-translate="dondeEncontrarnos">Donde <span class="span" data-translate="encontrarnosSpan">Encontrarnos?</span></h2>
                 </div>
                 <div class="parrafo-ubicacion">
-                    <p>Con un helipuerto cercano a la casa principal y una pista de aterrizaje de césped de 600 m para
-                        aeronaves ligeras, Brisa del Bosque Estate es de fácil acceso, aunque se siente como un mundo
-                        aparte. Estás a solo un corto trayecto de los principales aeropuertos nacionales.</p>
-                    <p>O disfrutá de un espectacular viaje por carretera a través de la majestuosa región montañosa del
-                        bosque nuboso costarricense:</p>
-                    <p>San José: 2 horas</p>
-                    <p>Cartago: 1 hora y 30 minutos</p>
-                    <p>Santa María de Dota: 15 minutos</p>
+                    <p data-translate="parrafoUbicacion1">Con un helipuerto cercano a la casa principal y una pista de aterrizaje de césped de 600 m para aeronaves ligeras, Brisa del Bosque Estate es de fácil acceso, aunque se siente como un mundo aparte. Estás a solo un corto trayecto de los principales aeropuertos nacionales.</p>
+                    <p data-translate="parrafoUbicacion2">O disfrutá de un espectacular viaje por carretera a través de la majestuosa región montañosa del bosque nuboso costarricense:</p>
+                    <p data-translate="ubicacionSanJose">San José: 2 horas</p>
+                    <p data-translate="ubicacionCartago">Cartago: 1 hora y 30 minutos</p>
+                    <p data-translate="ubicacionSantaMaria">Santa María de Dota: 15 minutos</p>
                 </div>
 
                 <div class="mapa-ubicacion">
@@ -264,17 +161,17 @@
     <footer>
         <div class="septima-seccion">
             <div class="frase7">
-                <h2>Una experiencia que <span class="span"><br>nunca olvidarás</span></h2>
+                <h2 data-translate="footerFrase">Una experiencia que <span class="span" data-translate="footerFraseSpan"><br>nunca olvidarás</span></h2>
             </div>
             <div class="footerColumna">
                 <div class="menu-links">
-                    <a class="menu-enlace-footer" href="./inicio.html">INICIO</a>
-                    <a class="menu-enlace-footer" href="./nosotros.html">NOSOTROS</a>
-                    <a class="menu-enlace-footer" href="./servicios.html">SERVICIOS</a>
-                    <a class="menu-enlace-footer" href="./habitaciones.html">HABITACIONES</a>
-                    <a class="menu-enlace-footer" href="./contacto.html">CONTACTO</a>
-                    <a class="menu-enlace-footer" href="./galeria.html">GALERÍA</a>
-                    <a class="menu-enlace-footer" href="./resenas.html">RESEÑAS</a>
+                    <a class="menu-enlace-footer" href="./inicio.html" data-translate="menuInicio">INICIO</a>
+                    <a class="menu-enlace-footer" href="./nosotros.html" data-translate="menuNosotros">NOSOTROS</a>
+                    <a class="menu-enlace-footer" href="./servicios.html" data-translate="menuServicios">SERVICIOS</a>
+                    <a class="menu-enlace-footer" href="./habitaciones.html" data-translate="menuHabitaciones">HABITACIONES</a>
+                    <a class="menu-enlace-footer" href="./contacto.html" data-translate="menuContacto">CONTACTO</a>
+                    <a class="menu-enlace-footer" href="./galeria.html" data-translate="menuGaleria">GALERÍA</a>
+                    <a class="menu-enlace-footer" href="./resenas.html" data-translate="menuResenas">RESEÑAS</a>
                 </div>
 
                 <div class="redesColumna">
@@ -287,11 +184,11 @@
 
     <div class="seccion-titulo-footer">
         <div class="titulo-footer">
-            <h1>HOTEL BRISA DEL BOSQUE</h1>
+            <h1 data-translate="hotelTitulo">HOTEL BRISA DEL BOSQUE</h1>
         </div>
 
         <div class="copyRight">
-            <p>Todos los derechos reservados Hotel Brisa del Bosque</p>
+            <p data-translate="footerDerechos">Todos los derechos reservados Hotel Brisa del Bosque</p>
         </div>
     </div>
 
@@ -301,12 +198,7 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p "
         crossorigin="anonymous "></script>
 
-
-    <!-- carga de la libreria -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js "></script>
-    <script>
-        baguetteBox.run('.tz-gallery');
-    </script>
+    <script src="js/inicio.js"></script>
 
 
 </body>
