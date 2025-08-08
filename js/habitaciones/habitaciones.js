@@ -94,6 +94,7 @@ function vistaLabel(vista) {
         case 'bosque': return 'Vista al bosque';
         case 'chimenea': return 'Chimenea';
         case 'balcon': return 'Balcón';
+        case 'sinVista': return 'Sin Vista';
         default: return vista;
     }
 }
