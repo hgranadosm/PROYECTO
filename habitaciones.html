@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habitaciones</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">  
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="img/favicon.png" rel="icon">
     <link href="css/inicio.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/habitaciones/combo2.css">
+    <link rel="stylesheet" href="css/habitaciones/habitaciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-4j0U5ZAE0WZQz+wFSFgxCh84W9G8XFiX2N8J9IWKZ05YIh6V+aBqVo3J3L1s4v0hJpBkhHkRMNAmfSlEFlKHVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
-    
-      <!--HEADER-->
-      <header>
+
+    <!--HEADER-->
+    <header>
         <div class="contenedor-header">
             <a href="./inicio.html">
                 <img src="./img/logo-blanco.png" class="logo" alt="logo hotel">
@@ -42,54 +49,144 @@
     <!--FIN HEADER-->
 
 
-    <section class="container">
+    <section >
         <div class="row">
-            <div class="col-sm-5 col-md-5 col-lg-5">
+            <div class="filtros">
                 <div class="inputs pt-4">
-                    <h2 class="pb-3">Seleccione el vehículo</h2>
-                    <h4>Modelo</h4>
-
-                    <!-- combo1 -->
-                    <select name="modelo" id="modelo">
-                        <option selected disabled>Seleccione un modelo:</option>
-                        <option>Fronteir</option>
-                        <option>Kicks</option>
-                        <option>Sentra</option>
-                        <option>Qashqai</option>
-                        <option>Murano</option>
+                    <h4>Precio</h4>
+                    <select name="precioHabitacion" id="precioHabitacion">
+                        <option value="" selected>Seleccione un precio:</option>
+                        <option value="110">$110</option>
+                        <option value="120">$120</option>
+                        <option value="130">$130</option>
+                        <option value="140">$140</option>
+                        <option value="170">$170</option>
+                        <option value="180">$180</option>
+                        <option value="190">$190</option>
+                        <option value="240">$240</option>
+                        <option value="250">$250</option>
+                        <option value="260">$260</option>
+                        <option value="320">$320</option>
+                        <option value="330">$330</option>
+                        <option value="340">$340</option>
+                        <option value="350">$350</option>
+                        <option value="400">$400</option>
+                        <option value="480">$480</option>
+                        <option value="500">$500</option>
+                        <option value="510">$510</option>
+                        <option value="520">$520</option>
                     </select>
-
-                    <div class="pt-3"></div>
-                    <h4>Versión</h4>
-                    <!-- combo2 -->
-                    <select name="version" id="version">
-                        <option selected disabled>Seleccione una versión:</option>
-                        <option>4x2</option>
-                        <option>4x4</option>
-                        <option>4x5</option>
-                    </select>
-
-                    <!-- boton-->
-                    <div class="pt-5">
-                        <button class="btn btn-danger btn-lg mt-3" onclick="calcular()">Calcular</button>
-                    </div>
                 </div>
-            </div>
 
-            <!-- foto modelo -->
-            <div class="col-sm-7 col-md-7 col-lg-7">
-                <div class="text-center logo2 pt-5">
-                    <img src="imagenes/autos.jpg" alt="Vehiculo" id="imagen">
+                <div class="inputs">
+                    <h4>Tipo de cama</h4>
+                    <select name="camaHabitacion" id="camaHabitacion">
+                        <option value="" selected>Seleccione tipo de cama:</option>
+                        <option value="individual">Cama individual</option>
+                        <option value="matrimonial">Cama matrimonial</option>
+                        <option value="queen">Cama queen</option>
+                        <option value="king">Cama king</option>
+                        <option value="separadas">Camas separadas</option>
+                    </select>
+                </div>
+
+                <div class="inputs">
+                    <h4>Grupo</h4>
+                    <select name="grupoHabitacion" id="grupoHabitacion">
+                        <option value="" selected>Seleccione un grupo:</option>
+                        <option value="pareja">Pareja</option>
+                        <option value="familia">Familia</option>
+                        <option value="amigos">Amigos</option>
+                        <option value="individual">Individual</option>
+                        <option value="grupoGrande">Grupo grande</option>
+                    </select>
+                </div>
+
+                <div class="inputs">
+                    <h4>Tipo de Habitación</h4>
+                    <select name="tipoHabitacion" id="tipoHabitacion">
+                        <option value="" selected>Seleccione un tipo:</option>
+                        <option value="sencilla">Sencilla</option>
+                        <option value="doble">Doble</option>
+                        <option value="suite">Suite</option>
+                        <option value="tematica">Temática</option>
+                        <option value="lunaDeMiel">Luna de miel</option>
+                    </select>
+                </div>
+
+                <div class="inputs">
+                    <h4>Vista</h4>
+                    <select name="vistaHabitacion" id="vistaHabitacion">
+                        <option value="" selected>Seleccione una vista:</option>
+                        <option value="jacuzzi">Jacuzzi</option>
+                        <option value="bosque">Vista al bosque</option>
+                        <option value="chimenea">Chimenea</option>
+                        <option value="balcon">Balcón</option>
+                    </select>
+                </div>
+                <div class="pt-5">
+                    <button class="btn btn-danger btn-lg mt-3" onclick="calcularHabitacion()">Calcular</button>
+                    <button class="btn btn-secondary btn-lg mt-3 ms-3" onclick="limpiarFiltros()">Limpiar filtros</button>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Cards Habitaciones -->
+    <section >
+        <div class="row" id="cardsHabitaciones">
+        </div>
+    </section>
 
+   
+    <!-- Barra de búsqueda textual -->
+    <div >
+        <div class="buscador-barra">
+            <button class="searchIcon" type="button" onclick="searchServicios()">
+                <i class="ri-search-line"></i>
+            </button>
+            <input type="text" id="searchInput" class="searchInput" placeholder="Buscar proveedor...">
+        </div>
+        <p id="pResult" class="resultado mt-4"></p>
+    </div>
 
+    <section class="container-room">
+        <div id="servicios-tira" class="owl-carousel text-center">
+            <div class="item">
+                <div><i class="fa-solid fa-wifi servicio-icono"></i></div>
+                <h4>WiFi Gratis</h4>
+                <p>Internet de alta velocidad en todas las habitaciones.</p>
+            </div>
+            <div class="item">
+                <div><i class="fa-solid fa-shower servicio-icono"></i></div>
+                <h4>Ducha Privada</h4>
+                <p>Baño privado con agua caliente.</p>
+            </div>
+            <div class="item">
+                <div><i class="fa-solid fa-tv servicio-icono"></i></div>
+                <h4>TV Satelital</h4>
+                <p>Televisión con canales internacionales.</p>
+            </div>
+            <div class="item">
+                <div><i class="fa-solid fa-bed servicio-icono"></i></div>
+                <h4>Camas cómodas</h4>
+                <p>Colchones premium para tu descanso.</p>
+            </div>
+            <div class="item">
+                <div><i class="fa-solid fa-mug-hot servicio-icono"></i></div>
+                <h4>Desayuno incluido</h4>
+                <p>Desayuno continental cada mañana.</p>
+            </div>
+            <div class="item">
+                <div><i class="fa-solid fa-car servicio-icono"></i></div>
+                <h4>Parqueo</h4>
+                <p>Estacionamiento privado y seguro.</p>
+            </div>
+        </div>
+    </section>
 
-    
-     <!-- FOOTER -->
-     <section id="seccion-footer" class="mt-5">
+                
+    <!-- FOOTER -->
+    <section id="seccion-footer" class="mt-5">
         <footer>
             <div class="septima-seccion">
                 <div class="frase7">
@@ -125,10 +222,13 @@
 
 
 
-    <script src="js/habitaciones/combo2.js"></script>
-
+    <script src="js/habitaciones/db.js"></script>
+    <script src="js/habitaciones/habitaciones.js"></script>
+    <script src="js/habitaciones/amenidades.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-    
 </body>
+
 </html>

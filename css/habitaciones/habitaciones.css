@@ -1,0 +1,166 @@
+.servicio-icono {
+    font-size: 4rem;
+    color: #1976d2;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+}
+.buscador-barra {
+    display: flex;
+    align-items: center;
+    background: #f7f7fa;
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.buscador-barra input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1.3rem;
+    color: #8a8bb3;
+    flex: 1;
+    padding-left: 0.5rem;
+}
+.buscador-barra .searchIcon {
+    background: none;
+    border: none;
+    color: #8a8bb3;
+    font-size: 1.3rem;
+    padding: 0;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+.buscador-barra input::placeholder {
+    color: #8a8bb3;
+    opacity: 1;
+}
+
+#servicios-tira .item {
+    cursor: pointer;
+    margin: 0.5em;
+    transition: 0.5s all;
+    padding: 1em;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#servicios-tira {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#servicios-tira .item h4 {
+    color: #1976d2;
+    margin: 18px 0 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+#servicios-tira .item p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0;
+}
+#servicios-tira .item i {
+    margin-bottom: 10px;
+    transition: color 0.2s;
+}
+#servicios-tira .item:hover i {
+    color: #43b581;
+}
+
+.filtros{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inputs select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background: #fff;
+    color: #222;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: border-color 0.2s;
+}
+.inputs select:focus {
+    border-color: #1976d2;
+    outline: none;
+}
+.inputs h4 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #222;
+    font-weight: 500;
+}
+.inputs .pt-3, .inputs .pt-5 {
+    margin-bottom: 10px;
+}
+.inputs {
+    margin-bottom: 10px;
+}
+
+
+#cardsHabitaciones {
+    margin-bottom: 100px; 
+}
+
+.searchInput {
+    width: 80%;
+    background-color: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 5px 15px;
+    color: #fff;
+    border-radius: 5px;
+    border-right: none;
+}
+.searchInput::placeholder {
+    color: #fff;
+    font-size: 14px;
+}
+.searchIcon {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+    border-right: 2px solid #fff;
+}
+.searchIcon i {
+    display: flex;
+    padding: 5px 10px;
+}
+.input-group {
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.form-control:focus {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: none;
+}
+.resultado {
+    color: #fff;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.card-text {
+    color: #555;
+}
