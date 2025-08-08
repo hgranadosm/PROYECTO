@@ -1,4 +1,4 @@
-#owl-demo .item {
+#owl-demo .item-nosotros {
     cursor: pointer;
     margin: 0.5em;
     transition: 0.5s all;
@@ -6,15 +6,19 @@
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
     padding: 1em;
-    background: #fff;
 }
 
-.item h4 {
+
+.item-nosotros {
+    border-radius: 50%;
+}
+
+.item-nosotros h4 {
     color: #000 !important;
     margin: 20px 0 10px;
 }
 
-.item h4 a {
+.item-nosotros h4 a {
     text-transform: uppercase;
     font-size: 24px;
     color: #3b3b3b;
@@ -25,15 +29,32 @@
     -o-transition: 0.5s all;
 }
 
-.item h4 a:hover {
+.item-nosotros h4 a:hover {
     color: #ff5454;
     text-decoration: none;
 }
 
-.item p {
+.item-nosotros p {
     font-size: 18px;
     color: #3b3b3b;
     line-height: 1.8em;
+}
+
+.imagen-tira{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-tira img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .owl-theme .owl-controls .owl-buttons div {
