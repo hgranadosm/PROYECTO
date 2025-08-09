@@ -159,7 +159,7 @@ header {
     font-family: 'EditorialOld';
     font-weight: 400;
     font-size: 40px;
-      letter-spacing: 1px;
+    letter-spacing: 1px;
 }
 
 .parrafo{
@@ -190,6 +190,10 @@ header {
     width: 90%;
 }
 
+.titulo-suscripcion{
+    color: #333;
+    font-weight: bold;
+}
 /* ---------------------------- TERCERA PARTE ---------------------------- */
 .tercer-seccion {
     display: flex;

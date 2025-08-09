@@ -1,50 +1,106 @@
-.container{
-    margin-top: 100px;
-  }
-  p{
-    font-size: 18px;
-  }
-  
-  header img {
-    width: 80px;
-  }
-  
-  input, select {
-    cursor: pointer;
-  }
-  
-  .error {
-    border: red solid 1px;
-  }
-  
-  #razas {
+.imagen {
+    width: 320px;
+    height: 220px;
+    max-width: 90vw;
+    max-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin: 0 auto 18px auto !important;
+}
+
+#output-img img {
     width: 100%;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 6px;
-    background-color: #f8f0fb;
-    border: 1px solid #a33194;
-    color: #a33194;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+.contenedor-combo1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  margin: 0 !important;
+  width: 100vw;
+  min-height: 60vh;
+  box-sizing: border-box;
+}
+
+.frase1, .titulo-servicio, p {
+  font-size: 22px;
+  color: #222;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 18px 0 !important;
+  padding: 0 !important;
+  width: 100%;
+}
+
+.frase-servicios{
+  padding: 100px 0px 40px 0px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frase-servicios h2{
+    font-family: 'EditorialOld';
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+
+.titulo-servicio {
   
-  #razas:focus {
-    outline: none;
-    box-shadow: none;
-    border-color: #e64980;
-  }
-  
-  .boton{
-    background-color: #a33194;
-    transition: all 0.3s ease;
-    color: white;
-  }
-  
-  .boton:hover{
-    background-color:  #e64980;
-     color: white;
-  }
+  color: #222;
+}
+
+p{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#servicios {
+  width: 320px;
+  max-width: 90vw;
+  margin: 0 auto 18px auto !important;
+  display: block;
+  padding: 12px 18px;
+  font-size: 18px;
+  border: none;
+  color: #222;
+  background: #f7f7f7;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.boton {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 32px;
+  transition: color 0.3s;
+  align-items: end;
+  display: block;
+}
+
+.boton:hover {
+  background: #e64980;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(230,73,128,0.08);
+}
