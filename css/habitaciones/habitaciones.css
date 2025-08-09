@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'EditorialOld';
+    src: url('../fonts/ppeditorialold-ultralight.otf') format('truetype');
+}
+
 .servicio-icono {
     font-size: 4rem;
     color: #1976d2;
@@ -14,7 +19,9 @@
 .buscador-barra {
     display: flex;
     width: 40%;
-    background: #f7f7fa;
+    background: transparent;
+    color: #333;
+    border: 1px solid #333;
     border-radius: 2rem;
     padding: 10px ;
 }
@@ -24,14 +31,14 @@
     justify-content: center;
     outline: none;
     font-size: 1.3rem;
-    color: #8a8bb3;
+    color: #333;
     flex: 1;
     padding-left: 0.5rem;
 }
 .buscador-barra .searchIcon {
     background: none;
     border: none;
-    color: #8a8bb3;
+    color: #333;
     font-size: 1.3rem;
     padding: 0;
     margin-right: 0.5rem;
@@ -39,24 +46,25 @@
 }
 
 .buscador-barra input::placeholder {
-    color: #8a8bb3;
+    color: #333;
     opacity: 1;
 }
 
 .container-amedidades{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     padding: 50px;
     justify-content: center;
 }
 
 #servicios-tira .item {
-    width: 60%;
+    width: 500px;
     cursor: pointer;
-    margin: 0.5em;
     transition: 0.5s all;
     padding: 1em;
-    background: #fff;
+    background: transparent;
+    color: #333;
+    border: 1px solid #333;
     border-radius: 16px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
     display: flex;
@@ -66,16 +74,23 @@
 }
 
 #servicios-tira {
-    width: 50%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 #servicios-tira .item h4 {
-    color: #1976d2;
+    font-family: 'EditorialOld';
+    color: #333;
     margin: 18px 0 8px;
     font-size: 1.3rem;
     font-weight: 600;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 1px;
+
 }
 #servicios-tira .item p {
     font-size: 1rem;
@@ -90,33 +105,76 @@
     color: #43b581;
 }
 
+.titulo-estancia{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+} 
+
+.titulo-estancia h2{
+    font-family: 'EditorialOld';
+    font-weight: 400;
+    font-size: 40px;
+    margin-bottom: 70px;
+    letter-spacing: 1px;
+}
+
+.titulo-filtro{
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    padding: 100px 0px 40px 0px;
+}
+
+p{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 .filtros{
     display: flex;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 .inputs select {
     width: 100%;
     padding: 14px 18px;
-    border: 1px solid #e0e0e0;
+    background-color: transparent !important;
+    background: none;
+    color: #333;
+    border: 1px solid #333 !important;
     border-radius: 10px;
     font-size: 1.2rem;
-    background: #fff;
-    color: #222;
     margin-bottom: 18px;
+    cursor: pointer;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     transition: border-color 0.2s;
+    appearance: none;       
+    -webkit-appearance: none;
+    -moz-appearance: none;  
 }
+
+.inputs select {
+    border: 1px solid #333;
+    box-shadow: 0 6px 6px rgba(51, 51, 51, 0.1);
+}
+
 .inputs select:focus {
-    border-color: #1976d2;
+    border-color: transparent;
     outline: none;
 }
+
 .inputs h4 {
     margin-bottom: 8px;
     font-size: 1.1rem;
     color: #222;
     font-weight: 500;
 }
+
 .inputs .pt-3, .inputs .pt-5 {
     margin-bottom: 10px;
 }
@@ -202,25 +260,7 @@
   font-size: 1.1rem;
   color: #222;
   font-weight: 500;
-}
-
-.btn-danger, .btn-secondary {
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 12px 32px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  border: none;
-  transition: background 0.2s, box-shadow 0.2s;
-}
-.btn-danger:hover {
-  background: #1976d2;
-  color: #fff;
-  box-shadow: 0 4px 16px rgba(25,118,210,0.08);
-}
-.btn-secondary:hover {
-  background: #222;
-  color: #fff;
-  box-shadow: 0 4px 16px rgba(25,118,210,0.08);
+  text-align: start;
 }
 
 .filtros {
@@ -234,21 +274,25 @@
   text-align: center;
   align-items: center;
 }
+
 .filtros .row {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 0;
 }
+
 .filtros .col-md-4 {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 18px;
 }
+
 .inputs {
   width: 100%;
   max-width: 340px;
+  align-items: center;
 }
 
 .botones-habitacion{
@@ -260,6 +304,28 @@
     margin-bottom: 60px;
 }
 
-.btn{
-    background-color: #43b581;
+
+.btn {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: ease 0.5s;
+    outline: none; 
+    box-shadow: none;
+    appearance: none; 
+}
+
+.btn:hover {
+    border: 1px solid #333;
+    box-shadow: 0 6px 6px rgba(51, 51, 51, 0.1);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
 }
