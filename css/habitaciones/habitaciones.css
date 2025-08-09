@@ -4,17 +4,24 @@
     margin-bottom: 10px;
     transition: color 0.2s;
 }
+
+.contenedor-buscador-barra{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
 .buscador-barra {
     display: flex;
-    align-items: center;
+    width: 40%;
     background: #f7f7fa;
     border-radius: 2rem;
-    padding: 0.5rem 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    padding: 10px ;
 }
 .buscador-barra input {
     border: none;
     background: transparent;
+    justify-content: center;
     outline: none;
     font-size: 1.3rem;
     color: #8a8bb3;
@@ -30,12 +37,21 @@
     margin-right: 0.5rem;
     cursor: pointer;
 }
+
 .buscador-barra input::placeholder {
     color: #8a8bb3;
     opacity: 1;
 }
 
+.container-amedidades{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    justify-content: center;
+}
+
 #servicios-tira .item {
+    width: 60%;
     cursor: pointer;
     margin: 0.5em;
     transition: 0.5s all;
@@ -104,13 +120,13 @@
 .inputs .pt-3, .inputs .pt-5 {
     margin-bottom: 10px;
 }
-.inputs {
-    margin-bottom: 10px;
-}
 
 
 #cardsHabitaciones {
     margin-bottom: 100px; 
+    padding: 0px 40px ;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .searchInput {
@@ -163,4 +179,87 @@
 
 .card-text {
     color: #555;
+}
+
+.inputs select, .inputs input {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  font-size: 1.2rem;
+  background: #f7f7f7;
+  color: #222;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s, border-color 0.2s;
+  outline: none;
+}
+.inputs select:focus, .inputs input:focus {
+  box-shadow: 0 4px 16px rgba(25,118,210,0.08);
+  border: 1px solid #1976d2;
+}
+.inputs h4 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.btn-danger, .btn-secondary {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 12px 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: none;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-danger:hover {
+  background: #1976d2;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(25,118,210,0.08);
+}
+.btn-secondary:hover {
+  background: #222;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(25,118,210,0.08);
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.filtros .row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.filtros .col-md-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.inputs {
+  width: 100%;
+  max-width: 340px;
+}
+
+.botones-habitacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.btn{
+    background-color: #43b581;
 }

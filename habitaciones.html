@@ -125,10 +125,10 @@
                         <option value="sinVista">Sin vista</option>
                     </select>
                 </div>
-                <div class="pt-5">
-                    <button class="btn btn-danger btn-lg mt-3" onclick="calcularHabitacion()">Calcular</button>
-                    <button class="btn btn-secondary btn-lg mt-3 ms-3" onclick="limpiarFiltros()">Limpiar filtros</button>
-                </div>
+            </div>
+            <div class="botones-habitacion">
+                <button class="btn" onclick="calcularHabitacion()">Calcular</button>
+                <button class="btn" onclick="limpiarFiltros()">Limpiar filtros</button>
             </div>
         </div>
     </section>
@@ -140,17 +140,17 @@
 
    
     <!-- Barra de búsqueda textual -->
-    <div >
+    <div class="contenedor-buscador-barra" >
         <div class="buscador-barra">
             <button class="searchIcon" type="button" onclick="searchServicios()">
                 <i class="ri-search-line"></i>
             </button>
-            <input type="text" id="searchInput" class="searchInput" placeholder="Buscar proveedor...">
+            <input type="text" id="searchInput" class="searchInput" placeholder="Buscar amenidades...">
         </div>
         <p id="pResult" class="resultado mt-4"></p>
     </div>
 
-    <section class="container-room">
+    <section class="container-amedidades">
         <div id="servicios-tira" class="owl-carousel text-center">
             <div class="item">
                 <div><i class="fa-solid fa-wifi servicio-icono"></i></div>
