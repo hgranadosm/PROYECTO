@@ -17,9 +17,9 @@
     display: block;
     padding: 12px 18px;
     font-size: 18px;
-    border: none;
-    color: #222;
-    background: #f7f7f7;
+    color: #333;
+    border: 1px solid #333;
+    background: transparent;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     appearance: none;
     -webkit-appearance: none;
@@ -276,10 +276,6 @@
         transform: scale(1);
     }
 }
-
-
-
-/*tamaño de la foto principal*/
 
 .fp img {
     width: 620px;

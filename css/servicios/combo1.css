@@ -60,7 +60,6 @@
 
 
 .titulo-servicio {
-  
   color: #222;
 }
 
@@ -69,16 +68,24 @@ p{
   font-weight: 400;
 }
 
+.contenedor-combo1-servicios{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: right;
+  align-items: end;
+}
+
 #servicios {
   width: 320px;
   max-width: 90vw;
-  margin: 0 auto 18px auto !important;
   display: block;
   padding: 12px 18px;
   font-size: 18px;
   border: none;
-  color: #222;
-  background: #f7f7f7;
+  color: #333;
+  border: 1px solid #333;
+  background: transparent;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   appearance: none;
   -webkit-appearance: none;
@@ -87,9 +94,8 @@ p{
 }
 
 .boton {
-  background: #222;
-  color: #fff;
-  border: none;
+  color: #333;
+  border: 1px solid #333;
   border-radius: 8px;
   font-size: 18px;
   font-weight: 500;
@@ -97,10 +103,11 @@ p{
   transition: color 0.3s;
   align-items: end;
   display: block;
+  transition: ease 0.5s;
+
 }
 
 .boton:hover {
-  background: #e64980;
-  color: #fff;
-  box-shadow: 0 4px 16px rgba(230,73,128,0.08);
+    border: 1px solid #333;
+    box-shadow: 0 6px 6px rgba(51, 51, 51, 0.1);
 }
