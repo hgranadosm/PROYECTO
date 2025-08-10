@@ -9,6 +9,59 @@
     padding-bottom: 45px;
     font-size: 60px;
 }
+
+
+input::placeholder {
+    color: #888;
+    opacity: 1;
+    font-size: 15px;
+}
+
+.boton-icono{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton-contacto{
+    width: auto;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: inline-block;
+    line-height: 1;
+}
+
+.boton-contacto i{
+    display: flex;
+    font-size: 10px;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(238, 190, 101);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.boton-contacto i:hover{
+    font-size: 10px;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(194, 155, 84);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
 .accordion-button {
     font-size: 20px;
     font-weight: 400;
@@ -86,26 +139,10 @@
     padding: 0px 10px;
     z-index: 1;
     color: #000;
-
     border-bottom: 1px solid #333;
 }
 
-.sectionForm .containerForm .formRow .colForm .inputBox input:focus + .text,
-.sectionForm .containerForm .formRow .colForm .inputBox input:valid + .text {
-    left: -10px;
-    top: -35px;
-}
-.sectionForm .containerForm .formRow .colForm .inputBox .line {
-    position: absolute;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 2px;
-    transition: 0.5s;
-    border-radius: 2px;
-    pointer-events: none;
-    background-color: #ffd433;
-}
+
 .sectionForm .containerForm .formRow .colForm .inputBox input:focus ~ .line,
 .sectionForm .containerForm .formRow .colForm .inputBox input:valid ~ .line {
     height: 100%;
@@ -129,17 +166,7 @@
 .sectionForm .containerForm .formRow .colForm .inputBox textarea:valid ~ .line {
     height: 100%;
 }
-input[type="submit"] {
-    border: none;
-    padding: 7px 35px;
-    cursor: pointer;
-    outline: none;
-    background-color: #ffd433;
-    color: #000;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 2px;
-}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -149,6 +176,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
 .alertaRoja{
     color: #ff0000;
     font-weight: 500;
