@@ -1,6 +1,5 @@
 .seccionInscripcion .email::placeholder {
-    color: #888;
-    opacity: 1;
+    color: #333;
 }
 .titulo-suscripcion{
     color: #333;
@@ -77,3 +76,18 @@
     height: 20px;
     cursor: pointer;
 }
+
+.alertaRoja{
+    color: #a10202;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+}
+.alertaVerde{
+    color: #027700;
+    font-weight: 500;
+    font-size: 18px;
+    font-size: 15px;
+    text-align: center;
+}
+

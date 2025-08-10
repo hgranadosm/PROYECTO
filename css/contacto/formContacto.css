@@ -12,8 +12,12 @@
 
 
 input::placeholder {
-    color: #888;
-    opacity: 1;
+    color: #333;
+    font-size: 15px;
+}
+
+textarea::placeholder {
+    color: #333;
     font-size: 15px;
 }
 
@@ -178,12 +182,17 @@ input[type="number"] {
 }
 
 .alertaRoja{
-    color: #ff0000;
+    color: #a10202;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
 }
 .alertaVerde{
-    color: #2d572c;
+    color: #027700;
     font-weight: 500;
     font-size: 18px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
 }

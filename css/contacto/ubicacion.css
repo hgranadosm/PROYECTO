@@ -19,9 +19,10 @@
     display: flex;
     gap: 20px;
     max-width: 900px;
-    background: #fff;
+    background: transparent;
     border-radius: 10px;
     overflow: hidden;
+    border: 1px solid #333 ;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
