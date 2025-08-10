@@ -1,3 +1,9 @@
+.titulo-contacto{
+    font-weight: bold;
+    font-size: 60px;
+    padding: 100px 0px 50px 0px;
+}
+
 .tituloSeccion5 {
     padding-top: 25px;
     padding-bottom: 45px;
@@ -42,9 +48,7 @@
     border-radius: 5px;
 }
 
-.sectionForm {
-    background-color: #f8f8f8;
-}
+
 .sectionForm .containerForm {
     width: 80%;
     padding: 20px;
@@ -82,18 +86,10 @@
     padding: 0px 10px;
     z-index: 1;
     color: #000;
+
+    border-bottom: 1px solid #333;
 }
-.sectionForm .containerForm .formRow .colForm .inputBox .text {
-    position: absolute;
-    left: 0;
-    top: 0;
-    line-height: 40px;
-    font-size: 18px;
-    padding: 0px 10px;
-    display: block;
-    transition: 0.5s;
-    pointer-events: none;
-}
+
 .sectionForm .containerForm .formRow .colForm .inputBox input:focus + .text,
 .sectionForm .containerForm .formRow .colForm .inputBox input:valid + .text {
     left: -10px;
