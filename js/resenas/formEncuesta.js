@@ -1,89 +1,111 @@
-function evaluarEncuesta() {
 
-    var pregunta1 = document.getElementById("r1").value
-    var pregunta2 = document.getElementById("r2").value
 
-    var respuesta3 = ""
-    document.getElementsByName("opinion")
-        .forEach(radio => {
-            if (radio.checked) {
-                console.log(radio.value);
-                respuesta3 = radio.value
-            }
-        });
+emailjs.init("HKiIThGpeT7T6eLPK");
 
-    var respuesta4 = ""
-    document.getElementsByName("opinion2")
-        .forEach(radio => {
-            if (radio.checked) {
-                console.log(radio.value);
-                respuesta4 = radio.value
-            }
-        });
 
-    if (pregunta1 == "" || pregunta2 == "" || respuesta3 == "" || respuesta4 == "") {
-        swal.fire({
-            title: "Atención usuario",
-            text: "No deje campos vacios!",
-            icon: "warning",
-        })
-    } else {
-
-        var mensaje1 = "";
-        if (document.formulario.atencion.checked == true && document.formulario.calidad.checked == true && document.formulario.servicio.checked == true) {
-            mensaje1 = "¡Gracias por confiar en nosotros y calificarnos bien en nuestros servicios!";
-        } else if (document.formulario.atencion.checked == false || document.formulario.calidad.checked == false || document.formulario.servicio.checked == false) {
-            mensaje1 = "Gracias por sus respuestas, tomaremos en cuenta sus respuestas para mejorar.";
-        } else if (document.formulario.atencion.checked == false && document.formulario.calidad.checked == false && document.formulario.servicio.checked == false) {
-            mensaje1 = "Gracias por sus respuestas, lamentamos no haya tenido la mejor experiencia, lo tomaremos en cuenta para mejorar.";
-        }
-
-        var mensaje3 = "";
-        if (respuesta4 == "Buena") {
-            mensaje3 = "Apreciamos que califique nuestra atencion al cliente de buena manera, seguiremos brindando nuestro servicio incluso mejor para seguir complaciendo a nuestros clientes.";
-        } else if (respuesta4 == "Regular") {
-            mensaje3 = "Agradecemos su sinceridad acerca de nuestros servicio de atencion, vamos a trabajar para mejorarlo.";
-        } else {
-            mensaje3 = "Lamentamos nuestra atencion al cliente le haya decepcionado, nos ocuparemos de eso para mejorar pronto y no causar otro problema igual.";
-        }
-
-        var mensaje2 = "";
-        if (respuesta3 == "Si") {
-            mensaje2 = "Gracias por preferirnos y poder darnos otra posible visita.";
-        } else {
-            mensaje2 = "Gracias por su respuesta, intentaremos mejorar para que pueda volver a nuestro hotel y sentirse más comodo.";
-        }
-        swal.fire({
-                title: "Respuestas enviadas",
-                text: "Gracias por realizar nuestra encuesta",
-                //icon: "success",
-                html: "<iframe src='https://embed.lottiefiles.com/animation/123492' width='440' height='380' > < /iframe>"
-            })
-        document.getElementById("res0").innerHTML = "¡Gracias por sus respuestas!";
-        document.getElementById("res1").innerHTML = mensaje2
-        document.getElementById("res2").innerHTML = mensaje3
-        document.getElementById("res3").innerHTML = mensaje1
-    }
+function showError(title, html) {
+  Swal.fire({ icon: "error", title, html });
 }
 
-function limpiarFormulario() {
-    document.getElementById("r1").value = "";
-    document.getElementById("r2").value = "";
-    var opcionesRadio3 = document.getElementsByName("opinion");
-    opcionesRadio3.forEach(radio => (radio.checked = false));
-    var opcionesRadio4 = document.getElementsByName("opinion2");
-    opcionesRadio4.forEach(radio => (radio.checked = false));
-    document.getElementById("calidad").checked = false;
-    document.getElementById("atencion").checked = false;
-    document.getElementById("servicio").checked = false;
-    document.getElementById("radio").checked = false;
-    document.getElementById("youtube").checked = false;
-    document.getElementById("facebook").checked = false;
-    document.getElementById("television").checked = false;
-    document.getElementById("otro").checked = false;
 
-    document.getElementById("res0").innerHTML = "";
-    document.getElementById("res1").innerHTML = "";
-    document.getElementById("res2").innerHTML = "";
-    document.getElementById("res3").innerHTML = "";
+function getMissingFields() {
+  const fields = [
+    { id: "fullName", name: "Nombre" },
+    { id: "phone", name: "Teléfono" },
+    { id: "email", name: "Correo" },
+  ];
+  const missing = fields
+    .filter((f) => !document.getElementById(f.id).value.trim())
+    .map((f) => f.name);
+
+  if (!document.querySelector('input[name="experiencia"]:checked'))
+    missing.push("Calificación experiencia");
+  if (!document.querySelector('input[name="atencionPersonal"]:checked'))
+    missing.push("Calificación atención del personal");
+  if (!document.querySelector('input[name="instalaciones"]:checked'))
+    missing.push("Calificación instalaciones");
+
+  return missing;
 }
+
+function isEmailValid(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+
+function collectParams() {
+  return {
+    fullName: document.getElementById("fullName").value.trim(),
+    phone: document.getElementById("phone").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    experiencia: document.querySelector('input[name="experiencia"]:checked').value,
+    atencionPersonal: document.querySelector('input[name="atencionPersonal"]:checked').value,
+    instalaciones: document.querySelector('input[name="instalaciones"]:checked').value,
+    observacion: document.getElementById("observacion").value.trim(),
+  };
+}
+
+
+function showConfirmation(params) {
+  document.getElementById("confirmBody").innerHTML = `
+    <p><strong>Nombre:</strong> ${params.fullName}</p>
+    <p><strong>Teléfono:</strong> ${params.phone}</p>
+    <p><strong>Correo:</strong> ${params.email}</p>
+    <p><strong>Experiencia general:</strong> ${params.experiencia}</p>
+    <p><strong>Atención del personal:</strong> ${params.atencionPersonal}</p>
+    <p><strong>Instalaciones:</strong> ${params.instalaciones}</p>
+    <p><strong>Observación:</strong> ${params.observacion || "<em>Ninguna</em>"}</p>
+  `;
+  new bootstrap.Modal(document.getElementById("confirmModal")).show();
+}
+
+
+function sendEmail(params) {
+  
+  return emailjs.send('service_blppxsc', 'template_02ckosv', params, 'HKiIThGpeT7T6eLPK');
+}
+
+
+document.getElementById("surveyForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+
+  const missing = getMissingFields();
+  if (missing.length) {
+    const list = missing.map((m) => `<li>${m}</li>`).join("");
+    showError("Campos faltantes", `<ul>${list}</ul>`);
+    return;
+  }
+
+
+  const email = document.getElementById("email").value.trim();
+  if (!isEmailValid(email)) {
+    showError("Correo inválido", "Ingrese un correo válido.");
+    return;
+  }
+
+ 
+  const templateParams = collectParams();
+  showConfirmation(templateParams);
+});
+
+
+document.getElementById("confirmSend").addEventListener("click", async () => {
+  const params = collectParams();
+  try {
+    const res = await sendEmail(params);
+    // success message
+    Swal.fire({
+      icon: "success",
+      title: "¡Gracias!",
+      text: "Tu encuesta ha sido enviada exitosamente.",
+    });
+    // reset the form
+    document.getElementById("surveyForm").reset();
+    // hide modal
+    bootstrap.Modal.getInstance(document.getElementById("confirmModal")).hide();
+  } catch (err) {
+    console.error("EmailJS Error:", err);
+    showError("Error al enviar", "Por favor intenta de nuevo más tarde.");
+  }
+});

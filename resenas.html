@@ -55,8 +55,8 @@
 
 
     <div class="resena-contenedor1">
-        <h2 class="titulo-alrededores"><span class="span">Lo que dicen nuestros huéspedes</span></h2>
-        <p class="pb-3 parrafo-alrededores">"En el Hotel de Montaña Brisa del Bosque, cada experiencia es única.
+        <h2 class="titulo-alrededores-resena"><span class="span">Lo que dicen nuestros huéspedes</span></h2>
+        <p class="pb-3 parrafo-alrededores-resena">"En el Hotel de Montaña Brisa del Bosque, cada experiencia es única.
             Nuestros huéspedes encuentran aquí un refugio donde la naturaleza, la comodidad y el servicio personalizado
             se unen para crear momentos memorables. Estas son algunas de las historias y opiniones de quienes han
             disfrutado su estancia con nosotros."</p>
@@ -119,7 +119,7 @@
     </section>
 
 
-    <section class="contenedor-video">    
+    <section class="contenedor-video">
         <div class="video-preview cursor" onclick="ejecutar('video','video7')">
             <video autoplay muted loop playsinline>
                 <source src="videos/video7.mp4" type="video/mp4">
@@ -130,7 +130,8 @@
         <div id="video" class="lightbox" onclick="ocultar('video','video7')">
             <div class="lightbox-container" onclick="event.stopPropagation()">
                 <div class="lightbox-content">
-                    <button onclick="ocultar('video','video7')" class="lightbox-close cursor" aria-label="Cerrar">✕</button>
+                    <button onclick="ocultar('video','video7')" class="lightbox-close cursor"
+                        aria-label="Cerrar">✕</button>
                     <div class="video-container">
                         <video id="video7" width="960" height="540" controls autoplay>
                             <source src="videos/video7.mp4" type="video/mp4">
@@ -143,87 +144,144 @@
     </section>
 
 
-    <section class="container">
+    <section class="">
         <div class="instrucciones text-center pt-5">
-            <h1>Realice la siguiente encuesta</h1>
-            <p class="pt-3">Esta encuesta se realiza con el fin de obtener su opinion personal acerca del servicio
-                brindado por parte de nuestro hotel,
-                <br> le agradecemos que se tome unos minutos para realizarla.
-            </p>
+            <h2 class="titulo-alrededores-1"><span class="span">Nos Importa Su Experiencia — Encuesta de Satisfacción</span></h2>
+            <p class="pb-3 parrafo-alrededores-resena">En nuestro compromiso por ofrecer un servicio excepcional, queremos conocer su opinión personal sobre su estadía en nuestro hotel. Le agradecemos sinceramente que nos dedique unos minutos para completar esta breve encuesta, la cual nos ayudará a seguir mejorando para brindarle momentos inolvidables.</p>
         </div>
 
-        <div class="encuesta">
-
-            <form action="" id="formulario" name="formulario">
-                <div class="row">
-
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                        <div class="inputs mb-3">
-                            <label for="pregunta1" class="colorLabel">1. Que es lo que mas destacaria durante la estadia
-                                en nuestro hotel?</label><br>
-                            <input type="text" id="r1" class="form-control mt-2" required>
-
-                            <label for="pregunta2" class="mt-3 colorLabel">2. Que es lo primero que recomendarias a
-                                alguien para venir a nuestro hotel?</label><br>
-                            <input type="text" id="r2" class="form-control mt-2" required>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                        <div class="radios">
-                            <label for="opinion" class="mb-2 colorLabel">3. Es probable que nos vuelva a
-                                visitar?</label><br>
-                            <input type="radio" id="radio1" name="opinion" value="Si" required> Si
-                            <br>
-                            <div class="pt-2"></div>
-                            <input type="radio" id="radio2" name="opinion" value="No"> No
-                            <br>
-                            <label for="opinion" class="mb-2 mt-3 colorLabel">4. Como califica la atencion que le
-                                dieron?</label><br>
-                            <input type="radio" id="radio3" name="opinion2" value="Buena" required> Buena
-                            <br>
-                            <div class="pt-2"></div>
-                            <input type="radio" id="radio4" name="opinion2" value="Regular"> Regular
-                            <br>
-                            <div class="pt-2"></div>
-                            <input type="radio" id="radio5" name="opinion2" value="Mala"> Mala
-                            <br>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                        <div class="checks">
-                            <label for="opinion" class="mb-2 colorLabel">5. Marque las opciones que
-                                destaque.</label><br>
-                            <input type="checkbox" id="calidad" class="checkbox" name="calidad"> Calidad
-                            <input type="checkbox" id="atencion" class="checkbox" name="atencion"> Atencion
-                            <input type="checkbox" id="servicio" class="checkbox" name="servicio"> Servicio
-
-                            <label for="opinion" class="mb-2 mt-3 colorLabel">6. Como se entero de nuestro
-                                hotel?<br>Marque 1 o más opciones.</label><br>
-                            <input type="checkbox" id="radio" class="checkbox"> Radio
-                            <input type="checkbox" id="youtube" class="checkbox"> Youtube
-                            <input type="checkbox" id="facebook" class="checkbox"> Facebook <br>
-                            <input type="checkbox" id="television" class="checkbox mt-2"> Television
-                            <input type="checkbox" id="otro" class="checkbox mt-2"> Otro
-                        </div>
-                    </div>
-                </div>
-
-                <div class="botonEnviar">
-                    <input type="button" value="Enviar" class="boton" onclick="evaluarEncuesta()">
-                    <input type="button" value="Limpiar" class="boton" onclick="limpiarFormulario()">
-                </div>
-            </form>
-
-            <div class="Resultados">
-                <h2 class="pt-3 pb-3" id="res0"></h2>
-                <p id="res1"></p>
-                <p id="res2"></p>
-                <p id="res3"></p>
-            </div>
-        </div>
     </section>
+
+
+      <main id="survey-hotel">
+      <div class="container-survey">
+         <div class=" text-center rounded-5">
+         </div>
+         <form id="surveyForm" class="survey-form p-4">
+            <div class="row mb-4">
+               <div class="col-md-4">
+                  <label for="fullName" class="form-label"></label>
+                  <input type="text" id="fullName" name="fullName" class="form-control"
+                     placeholder="Ingrese su nombre completo" />
+               </div>
+               <div class="col-md-4">
+                  <label for="phone" class="form-label"></label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="Teléfono" />
+               </div>
+               <div class="col-md-4">
+                  <label for="email" class="form-label"></label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Correo electrónico" />
+               </div>
+            </div>
+
+            <div class="row mb-4">
+               <div class="col-md-3">
+                  <p class="fw-semibold">¿Cómo califica la experiencia general de su estadía?</p>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="experiencia" id="experienciaExcelente" value="Excelente" />
+                     <label class="form-check-label" for="experienciaExcelente">Excelente</label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="experiencia" id="experienciaBuena" value="Buena" />
+                     <label class="form-check-label" for="experienciaBuena">Buena</label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="experiencia" id="experienciaMedia" value="Media" />
+                     <label class="form-check-label" for="experienciaMedia">Media</label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="experiencia" id="experienciaDeficiente" value="Deficiente" />
+                     <label class="form-check-label" for="experienciaDeficiente">Deficiente</label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="experiencia" id="experienciaMala" value="Mala" />
+                     <label class="form-check-label" for="experienciaMala">Mala</label>
+                  </div>
+               </div>
+
+               <div class="col-md-3">
+                  <p class="fw-semibold">¿Cómo califica la atención del personal?</p>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionExcelente" value="Excelente" />
+                     <label class="form-check-label" for="atencionExcelente">Excelente</label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionBuena" value="Buena" />
+                     <label class="form-check-label" for="atencionBuena">Buena</label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionMedia" value="Media" />
+                     <label class="form-check-label" for="atencionMedia">Media</label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionDeficiente" value="Deficiente" />
+                     <label class="form-check-label" for="atencionDeficiente">Deficiente</label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionMala" value="Mala" />
+                     <label class="form-check-label" for="atencionMala">Mala</label>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <p class="fw-semibold">¿Cómo califica la calidad de las instalaciones?</p>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesExcelente" value="Excelente" />
+                     <label class="form-check-label" for="instalacionesExcelente">Excelente</label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesBuena" value="Buena" />
+                     <label class="form-check-label" for="instalacionesBuena">Buena</label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesMedia" value="Media" />
+                     <label class="form-check-label" for="instalacionesMedia">Media</label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesDeficiente" value="Deficiente" />
+                     <label class="form-check-label" for="instalacionesDeficiente">Deficiente</label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesMala" value="Mala" />
+                     <label class="form-check-label" for="instalacionesMala">Mala</label>
+                  </div>
+               </div>
+               <!-- Observación -->
+               <div class="col-md-3">
+                  <label for="observacion" class="form-label">
+                     <strong>Escriba alguna observación</strong>
+                  </label>
+                  <textarea id="observacion" name="observacion" class="form-control" rows="6"
+                     placeholder="Escriba su mensaje"></textarea>
+               </div>
+            </div>
+
+            <div class="text-center pt-5">
+               <button type="submit" class="btn btn-primary px-5">Enviar respuesta</button>
+            </div>
+         </form>
+      </div>
+      <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="confirmModalLabel">Confirmación de respuestas</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+               </div>
+               <div class="modal-body" id="confirmBody">
+                  <!-- Aquí se mostrarán las respuestas seleccionadas -->
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                     Cancelar
+                  </button>
+                  <button type="button" id="confirmSend" class="btn btn-primary">
+                     Aceptar y enviar
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
 
 
 
