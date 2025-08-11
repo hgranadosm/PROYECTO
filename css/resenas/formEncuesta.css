@@ -35,21 +35,97 @@
     text-align: center;
 }
 p{
-    font-size: 17px;
+    font-size: 14px;
 }
 
-.alertaRoja{
-    color: #a10202;
-    font-weight: 500;
-    font-size: 15px;
-    text-align: center;
-    margin-top: 15px;
+.contenedor-encuesta{
+    padding: 0 100px 0 100px;
 }
-.alertaVerde{
-    color: #027700;
-    font-weight: 500;
+
+
+.form-control{
+    background-color: transparent;
+    outline: none;
+    border: none;
     font-size: 18px;
-    font-size: 15px;
-    text-align: center;
-    margin-top: 15px;
+    color: #000;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
 }
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    border-bottom: 1px solid #333;
+}
+
+.form-control::placeholder {
+    color: #333;
+    font-size: 15px;
+}
+
+#observacion{
+    border: 1px solid #333;
+}
+
+label{
+    font-size: 14px;
+}
+
+.form-check-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: transparent;
+    margin-right: 5px;
+}
+
+
+.form-check-input:focus {
+    outline: none !important;
+}
+
+.form-check-input:hover {
+    border: 1px solid #333;
+    box-shadow: 0 6px 6px rgba(51, 51, 51, 0.1);
+}
+
+.form-check-input:checked {
+    background-color: #333;
+    border-color: #333;
+}
+
+.form-check-label {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: ease 0.5s;
+    outline: none; 
+    box-shadow: none;
+    appearance: none; 
+}
+
+.btn:hover {
+    border: 1px solid #333;
+    box-shadow: 0 6px 6px rgba(51, 51, 51, 0.1);
+}
+

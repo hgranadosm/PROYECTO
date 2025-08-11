@@ -156,19 +156,19 @@
     </div>
 
      <main id="encuesta-servicio">
-      <div class="container py-5">
+      <div class="contenedor-encuesta">
         <form id="formulario3" class="p-4">
           <div class="row mb-4">
             <div class="col-md-4">
-              <label for="fullName" class="form-label">Nombre</label>
-              <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Ingrese su nombre completo" />
+              <label for="fullName" class="form-label"></label>
+              <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Nombre completo" />
             </div>
             <div class="col-md-4">
-              <label for="phone" class="form-label">Teléfono</label>
-              <input type="tel" id="phone" name="phone" class="form-control" placeholder="8888 7777" />
+              <label for="phone" class="form-label"></label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="Teléfono" />
             </div>
             <div class="col-md-4">
-              <label for="email" class="form-label">Correo</label>
+              <label for="email" class="form-label"></label>
               <input type="email" id="email" name="email" class="form-control" placeholder="Correo electrónico" />
             </div>
           </div>
@@ -197,7 +197,7 @@
               </div>
             </div>
             <div class="col-md-3">
-              <p class="fw-semibold">¿Cómo califica la atención del personal?</p>
+              <p class="fw-semibold">¿Cómo califica la atención <br> del personal?</p>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionExcelente" value="Excelente" />
                 <label class="form-check-label" for="atencionExcelente">Excelente</label>
@@ -220,7 +220,7 @@
               </div>
             </div>
             <div class="col-md-3">
-              <p class="fw-semibold">¿Cómo califica la calidad de las instalaciones?</p>
+              <p class="fw-semibold">¿Cómo califica la calidad <br> de las instalaciones?</p>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesExcelente" value="Excelente" />
                 <label class="form-check-label" for="instalacionesExcelente">Excelente</label>
@@ -244,13 +244,12 @@
             </div>
             <div class="col-md-3">
               <label for="observacion" class="form-label">
-                <strong>Escriba alguna observación</strong>
               </label>
-              <textarea id="observacion" name="observacion" class="form-control" rows="6" placeholder="Escriba su mensaje"></textarea>
+              <textarea id="observacion" name="observacion" class="form-control" rows="6" placeholder="Observaciones"></textarea>
             </div>
           </div>
           <div class="text-center pt-5">
-            <button type="submit" class="btn btn-primary px-5">Enviar respuesta</button>
+            <button type="submit" class="btn">Enviar respuesta</button>
           </div>
         </form>
       </div>
