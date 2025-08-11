@@ -4,11 +4,15 @@ function limpiarFiltros() {
     if (grupoSelect) grupoSelect.value = '';
     if (tipoSelect) tipoSelect.value = '';
     if (vistaSelect) vistaSelect.value = '';
+    if (fechaEntrada) fechaEntrada.value = '';
+    if (fechaSalida) fechaSalida.value = '';
     renderCardsHabitaciones();
 }
 const habitacionesDB = window.habitacionesDB;
 
 const grupoSelect = document.getElementById('grupoHabitacion');
+const fechaEntrada = document.getElementById('fechaEntradaHabitacion');
+const fechaSalida = document.getElementById('fechaSalidaHabitacion');
 const tipoSelect = document.getElementById('tipoHabitacion');
 const vistaSelect = document.getElementById('vistaHabitacion');
 const camaSelect = document.getElementById('camaHabitacion');
@@ -30,7 +34,9 @@ function getFiltrosSeleccionados() {
         cama: camaSelect && camaSelect.value ? camaSelect.value : null,
         grupo: grupoSelect && grupoSelect.value ? grupoSelect.value : null,
         tipo: tipoSelect && tipoSelect.value ? tipoSelect.value : null,
-        vista: vistaSelect && vistaSelect.value ? vistaSelect.value : null
+        vista: vistaSelect && vistaSelect.value ? vistaSelect.value : null,
+        fechaEntrada: fechaEntrada && fechaEntrada.value ? fechaEntrada.value : null,
+        fechaSalida: fechaSalida && fechaSalida.value ? fechaSalida.value : null
     };
 }
 
@@ -55,20 +61,67 @@ function renderCardsHabitaciones() {
     filtradas.forEach(h => {
         const card = document.createElement('div');
         card.className = 'col-md-4 mb-4';
+        let noches = 1;
+        const filtros = getFiltrosSeleccionados();
+        if (filtros.fechaEntrada && filtros.fechaSalida) {
+            const entrada = new Date(filtros.fechaEntrada);
+            const salida = new Date(filtros.fechaSalida);
+            if (entrada < salida) {
+                noches = Math.ceil((salida - entrada) / (1000 * 60 * 60 * 24));
+            }
+        }
+        const total = h.precio * noches;
         card.innerHTML = `
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm" style="background-color: transparent; color: #333; border: 1px solid #333;">
                 <img src="${h.imagen}" class="card-img-top" alt="${h.tipo}" style="height: 220px; object-fit: cover;">
                 <div class="card-body text-center">
                     <h5 class="card-title">${tipoLabel(h.tipo)}</h5>
                     <p class="card-text mb-1"><b>Vista:</b> ${vistaLabel(h.vista)}</p>
                     <p class="card-text mb-1"><b>Grupo:</b> ${h.grupo}</p>
                     <p class="card-text mb-1"><b>Cama:</b> ${h.cama}</p>
-                    <p class="card-text mb-1"><b>Precio:</b> $${h.precio}</p>
+                    <p class="card-text mb-1"><b>Precio por noche:</b> $${h.precio}</p>
                 </div>
             </div>
         `;
         contenedor.appendChild(card);
     });
+fechaEntrada && fechaEntrada.addEventListener('change', renderCardsHabitaciones);
+fechaSalida && fechaSalida.addEventListener('change', renderCardsHabitaciones);
+
+function validarFechasHabitacion() {
+    const hoy = new Date();
+    hoy.setHours(0,0,0,0);
+    if (fechaEntrada && fechaEntrada.value) {
+        const entrada = new Date(fechaEntrada.value);
+        if (entrada < hoy) {
+            Swal.fire({
+                title: 'Fecha de entrada inválida',
+                text: 'No puedes seleccionar una fecha de entrada anterior a hoy.',
+                icon: 'warning'
+            });
+            fechaEntrada.value = '';
+            renderCardsHabitaciones();
+            return false;
+        }
+    }
+    if (fechaSalida && fechaSalida.value) {
+        const salida = new Date(fechaSalida.value);
+        if (salida < hoy) {
+            Swal.fire({
+                title: 'Fecha de salida inválida',
+                text: 'No puedes seleccionar una fecha de salida anterior a hoy.',
+                icon: 'warning'
+            });
+            fechaSalida.value = '';
+            renderCardsHabitaciones();
+            return false;
+        }
+    }
+    return true;
+}
+
+fechaEntrada && fechaEntrada.addEventListener('change', validarFechasHabitacion);
+fechaSalida && fechaSalida.addEventListener('change', validarFechasHabitacion);
 }
 
 
@@ -122,15 +175,40 @@ function calcularHabitacion() {
     const grupo = grupoSelect.value;
     const cama = camaSelect.value;
     const precio = precioSelect.value;
+    const fechaEntradaVal = fechaEntrada && fechaEntrada.value ? fechaEntrada.value : null;
+    const fechaSalidaVal = fechaSalida && fechaSalida.value ? fechaSalida.value : null;
     if (!tipo || !vista || !grupo || !cama || !precio) {
         Swal.fire('Por favor seleccione grupo, tipo, vista, tipo de cama y precio de habitación');
         return;
     }
+    if (!fechaEntradaVal || !fechaSalidaVal) {
+        Swal.fire({
+            title: 'Fechas requeridas',
+            text: 'Debes seleccionar la fecha de entrada y la fecha de salida para calcular la estadía.',
+            icon: 'warning'
+        });
+        return;
+    }
     const habitacion = habitacionesDB.find(h => h.tipo === tipo && h.vista === vista && h.grupo === grupo && h.cama === cama && String(h.precio) === precio);
+    let noches = 1;
+    const entrada = new Date(fechaEntradaVal);
+    const salida = new Date(fechaSalidaVal);
+    if (entrada < salida) {
+        noches = Math.ceil((salida - entrada) / (1000 * 60 * 60 * 24));
+    }
+    const total = habitacion ? habitacion.precio * noches : 0;
     if (habitacion) {
         Swal.fire({
             title: 'Habitación seleccionada',
-            html: `<b>Grupo:</b> ${habitacion.grupo}<br><b>Tipo:</b> ${tipoLabel(habitacion.tipo)}<br><b>Vista:</b> ${vistaLabel(habitacion.vista)}<br><b>Cama:</b> ${habitacion.cama}<br><b>Precio:</b> $${habitacion.precio}`,
+            html: `<b>Grupo:</b> ${habitacion.grupo}<br>
+                   <b>Tipo:</b> ${tipoLabel(habitacion.tipo)}<br>
+                   <b>Vista:</b> ${vistaLabel(habitacion.vista)}<br>
+                   <b>Cama:</b> ${habitacion.cama}<br>
+                   <b>Precio por noche:</b> $${habitacion.precio}<br>
+                   <b>Fecha de entrada:</b> ${fechaEntradaVal}<br>
+                   <b>Fecha de salida:</b> ${fechaSalidaVal}<br>
+                   <b>Noches:</b> ${noches}<br>
+                   <b>Total estadía:</b> $${total}`,
             imageUrl: habitacion.imagen,
             imageWidth: 300,
             imageAlt: `${tipoLabel(habitacion.tipo)} ${vistaLabel(habitacion.vista)} ${habitacion.grupo} ${habitacion.cama} $${habitacion.precio}`
