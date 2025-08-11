@@ -2,30 +2,34 @@
 
 emailjs.init("HKiIThGpeT7T6eLPK");
 
-
 function showError(title, html) {
   Swal.fire({ icon: "error", title, html });
 }
 
-
 function getMissingFields() {
-  const fields = [
-    { id: "fullName", name: "Nombre" },
-    { id: "phone", name: "Teléfono" },
-    { id: "email", name: "Correo" },
-  ];
-  const missing = fields
-    .filter((f) => !document.getElementById(f.id).value.trim())
-    .map((f) => f.name);
-
-  if (!document.querySelector('input[name="experiencia"]:checked'))
-    missing.push("Calificación experiencia");
-  if (!document.querySelector('input[name="atencionPersonal"]:checked'))
-    missing.push("Calificación atención del personal");
-  if (!document.querySelector('input[name="instalaciones"]:checked'))
-    missing.push("Calificación instalaciones");
-
+  const missing = [];
+  if (!document.getElementById("fullName").value.trim()) missing.push("Nombre");
+  if (!document.getElementById("phone").value.trim()) missing.push("Teléfono");
+  const email = document.getElementById("email").value.trim();
+  if (!email) missing.push("Correo");
+  else if (!isEmailValid(email)) missing.push("Correo válido");
+  if (!document.querySelector('input[name="experiencia"]:checked')) missing.push("Calificación experiencia general");
+  if (!document.querySelector('input[name="atencionPersonal"]:checked')) missing.push("Calificación atención del personal");
+  if (!document.querySelector('input[name="instalaciones"]:checked')) missing.push("Calificación calidad de instalaciones");
   return missing;
+}
+
+function collectParams() {
+
+  return {
+    fullName: document.getElementById("fullName").value.trim(),
+    phone: document.getElementById("phone").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    experiencia: document.querySelector('input[name="experiencia"]:checked')?.value || "",
+    atencionPersonal: document.querySelector('input[name="atencionPersonal"]:checked')?.value || "",
+    instalaciones: document.querySelector('input[name="instalaciones"]:checked')?.value || "",
+    observacion: document.getElementById("observacion").value.trim(),
+  };
 }
 
 function isEmailValid(email) {
@@ -33,42 +37,13 @@ function isEmailValid(email) {
 }
 
 
-function collectParams() {
-  return {
-    fullName: document.getElementById("fullName").value.trim(),
-    phone: document.getElementById("phone").value.trim(),
-    email: document.getElementById("email").value.trim(),
-    experiencia: document.querySelector('input[name="experiencia"]:checked').value,
-    atencionPersonal: document.querySelector('input[name="atencionPersonal"]:checked').value,
-    instalaciones: document.querySelector('input[name="instalaciones"]:checked').value,
-    observacion: document.getElementById("observacion").value.trim(),
-  };
+
+function sendEmail() {
+  return emailjs.sendForm('service_0afw3ti', 'template_lzvu2qd', '#formulario3', 't9OTo1lsARRmvaBAv');
 }
 
-
-function showConfirmation(params) {
-  document.getElementById("confirmBody").innerHTML = `
-    <p><strong>Nombre:</strong> ${params.fullName}</p>
-    <p><strong>Teléfono:</strong> ${params.phone}</p>
-    <p><strong>Correo:</strong> ${params.email}</p>
-    <p><strong>Experiencia general:</strong> ${params.experiencia}</p>
-    <p><strong>Atención del personal:</strong> ${params.atencionPersonal}</p>
-    <p><strong>Instalaciones:</strong> ${params.instalaciones}</p>
-    <p><strong>Observación:</strong> ${params.observacion || "<em>Ninguna</em>"}</p>
-  `;
-  new bootstrap.Modal(document.getElementById("confirmModal")).show();
-}
-
-
-function sendEmail(params) {
-  
-  return emailjs.send('service_blppxsc', 'template_02ckosv', params, 'HKiIThGpeT7T6eLPK');
-}
-
-
-document.getElementById("surveyForm").addEventListener("submit", function (e) {
+document.getElementById("formulario3").addEventListener("submit", async function (e) {
   e.preventDefault();
-
 
   const missing = getMissingFields();
   if (missing.length) {
@@ -77,33 +52,14 @@ document.getElementById("surveyForm").addEventListener("submit", function (e) {
     return;
   }
 
-
-  const email = document.getElementById("email").value.trim();
-  if (!isEmailValid(email)) {
-    showError("Correo inválido", "Ingrese un correo válido.");
-    return;
-  }
-
- 
-  const templateParams = collectParams();
-  showConfirmation(templateParams);
-});
-
-
-document.getElementById("confirmSend").addEventListener("click", async () => {
-  const params = collectParams();
   try {
-    const res = await sendEmail(params);
-    // success message
+    await sendEmail();
     Swal.fire({
       icon: "success",
       title: "¡Gracias!",
       text: "Tu encuesta ha sido enviada exitosamente.",
     });
-    // reset the form
-    document.getElementById("surveyForm").reset();
-    // hide modal
-    bootstrap.Modal.getInstance(document.getElementById("confirmModal")).hide();
+    document.getElementById("formulario3").reset();
   } catch (err) {
     console.error("EmailJS Error:", err);
     showError("Error al enviar", "Por favor intenta de nuevo más tarde.");

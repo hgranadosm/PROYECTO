@@ -1,0 +1,55 @@
+
+.encuesta{
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+.colorLabel{
+    color: rgb(177, 71, 22);
+}
+.checkbox{
+    margin-left: 10px;
+}
+.inputs{
+    padding: 20px;
+} 
+.checks{
+    padding: 20px;
+}
+.radios{
+    padding: 20px;
+}
+
+.botonEnviar{
+    margin-top: 50px;
+    text-align: center;
+}
+.boton{
+    padding: 10px 30px;
+    border: none;
+    background-color: rgb(77, 128, 107);
+    color: white;
+    border-radius: 3px;
+}
+.Resultados{
+    margin-top: 50px;
+    text-align: center;
+}
+p{
+    font-size: 17px;
+}
+
+.alertaRoja{
+    color: #a10202;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+}
+.alertaVerde{
+    color: #027700;
+    font-weight: 500;
+    font-size: 18px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+}

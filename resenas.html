@@ -10,6 +10,7 @@
     <link href="img/favicon.png" rel="icon">
     <link href="css/inicio.css" rel="stylesheet">
     <link rel="stylesheet" href="css/resenas/testimoniales.css">
+    <link rel="stylesheet" href="css/resenas/formEncuesta.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
         integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
@@ -143,122 +144,115 @@
         </div>
     </section>
 
+    <!--ENCUESTA -->
 
-    <section class="">
-        <div class="instrucciones text-center pt-5">
-            <h2 class="titulo-alrededores-1"><span class="span">Nos Importa Su Experiencia — Encuesta de Satisfacción</span></h2>
-            <p class="pb-3 parrafo-alrededores-resena">En nuestro compromiso por ofrecer un servicio excepcional, queremos conocer su opinión personal sobre su estadía en nuestro hotel. Le agradecemos sinceramente que nos dedique unos minutos para completar esta breve encuesta, la cual nos ayudará a seguir mejorando para brindarle momentos inolvidables.</p>
-        </div>
+    <div class="instrucciones text-center pt-5">
+        <h2 class="titulo-alrededores-1"><span class="span">Nos Importa Su Experiencia — Encuesta de
+                Satisfacción</span></h2>
+        <p class="pb-3 parrafo-alrededores-resena">En nuestro compromiso por ofrecer un servicio excepcional,
+            queremos conocer su opinión personal sobre su estadía en nuestro hotel. Le agradecemos sinceramente que
+            nos dedique unos minutos para completar esta breve encuesta, la cual nos ayudará a seguir mejorando para
+            brindarle momentos inolvidables.</p>
+    </div>
 
-    </section>
-
-
-      <main id="survey-hotel">
-      <div class="container-survey">
-         <div class=" text-center rounded-5">
-         </div>
-         <form id="surveyForm" class="survey-form p-4">
-            <div class="row mb-4">
-               <div class="col-md-4">
-                  <label for="fullName" class="form-label"></label>
-                  <input type="text" id="fullName" name="fullName" class="form-control"
-                     placeholder="Ingrese su nombre completo" />
-               </div>
-               <div class="col-md-4">
-                  <label for="phone" class="form-label"></label>
-                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="Teléfono" />
-               </div>
-               <div class="col-md-4">
-                  <label for="email" class="form-label"></label>
-                  <input type="email" id="email" name="email" class="form-control" placeholder="Correo electrónico" />
-               </div>
+     <main id="encuesta-servicio">
+      <div class="container py-5">
+        <form id="formulario3" class="p-4">
+          <div class="row mb-4">
+            <div class="col-md-4">
+              <label for="fullName" class="form-label">Nombre</label>
+              <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Ingrese su nombre completo" />
             </div>
-
-            <div class="row mb-4">
-               <div class="col-md-3">
-                  <p class="fw-semibold">¿Cómo califica la experiencia general de su estadía?</p>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="experiencia" id="experienciaExcelente" value="Excelente" />
-                     <label class="form-check-label" for="experienciaExcelente">Excelente</label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="experiencia" id="experienciaBuena" value="Buena" />
-                     <label class="form-check-label" for="experienciaBuena">Buena</label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="experiencia" id="experienciaMedia" value="Media" />
-                     <label class="form-check-label" for="experienciaMedia">Media</label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="experiencia" id="experienciaDeficiente" value="Deficiente" />
-                     <label class="form-check-label" for="experienciaDeficiente">Deficiente</label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="experiencia" id="experienciaMala" value="Mala" />
-                     <label class="form-check-label" for="experienciaMala">Mala</label>
-                  </div>
-               </div>
-
-               <div class="col-md-3">
-                  <p class="fw-semibold">¿Cómo califica la atención del personal?</p>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionExcelente" value="Excelente" />
-                     <label class="form-check-label" for="atencionExcelente">Excelente</label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionBuena" value="Buena" />
-                     <label class="form-check-label" for="atencionBuena">Buena</label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionMedia" value="Media" />
-                     <label class="form-check-label" for="atencionMedia">Media</label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionDeficiente" value="Deficiente" />
-                     <label class="form-check-label" for="atencionDeficiente">Deficiente</label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionMala" value="Mala" />
-                     <label class="form-check-label" for="atencionMala">Mala</label>
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <p class="fw-semibold">¿Cómo califica la calidad de las instalaciones?</p>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesExcelente" value="Excelente" />
-                     <label class="form-check-label" for="instalacionesExcelente">Excelente</label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesBuena" value="Buena" />
-                     <label class="form-check-label" for="instalacionesBuena">Buena</label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesMedia" value="Media" />
-                     <label class="form-check-label" for="instalacionesMedia">Media</label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesDeficiente" value="Deficiente" />
-                     <label class="form-check-label" for="instalacionesDeficiente">Deficiente</label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesMala" value="Mala" />
-                     <label class="form-check-label" for="instalacionesMala">Mala</label>
-                  </div>
-               </div>
-               <!-- Observación -->
-               <div class="col-md-3">
-                  <label for="observacion" class="form-label">
-                     <strong>Escriba alguna observación</strong>
-                  </label>
-                  <textarea id="observacion" name="observacion" class="form-control" rows="6"
-                     placeholder="Escriba su mensaje"></textarea>
-               </div>
+            <div class="col-md-4">
+              <label for="phone" class="form-label">Teléfono</label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="8888 7777" />
             </div>
-
-            <div class="text-center pt-5">
-               <button type="submit" class="btn btn-primary px-5">Enviar respuesta</button>
+            <div class="col-md-4">
+              <label for="email" class="form-label">Correo</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Correo electrónico" />
             </div>
-         </form>
+          </div>
+          <div class="row mb-4">
+            <div class="col-md-3">
+              <p class="fw-semibold">¿Cómo califica la experiencia general de su estadía?</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="experiencia" id="experienciaExcelente" value="Excelente" />
+                <label class="form-check-label" for="experienciaExcelente">Excelente</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="experiencia" id="experienciaBuena" value="Buena" />
+                <label class="form-check-label" for="experienciaBuena">Buena</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="experiencia" id="experienciaMedia" value="Media" />
+                <label class="form-check-label" for="experienciaMedia">Media</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="experiencia" id="experienciaDeficiente" value="Deficiente" />
+                <label class="form-check-label" for="experienciaDeficiente">Deficiente</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="experiencia" id="experienciaMala" value="Mala" />
+                <label class="form-check-label" for="experienciaMala">Mala</label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <p class="fw-semibold">¿Cómo califica la atención del personal?</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionExcelente" value="Excelente" />
+                <label class="form-check-label" for="atencionExcelente">Excelente</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionBuena" value="Buena" />
+                <label class="form-check-label" for="atencionBuena">Buena</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionMedia" value="Media" />
+                <label class="form-check-label" for="atencionMedia">Media</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionDeficiente" value="Deficiente" />
+                <label class="form-check-label" for="atencionDeficiente">Deficiente</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="atencionPersonal" id="atencionMala" value="Mala" />
+                <label class="form-check-label" for="atencionMala">Mala</label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <p class="fw-semibold">¿Cómo califica la calidad de las instalaciones?</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesExcelente" value="Excelente" />
+                <label class="form-check-label" for="instalacionesExcelente">Excelente</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesBuena" value="Buena" />
+                <label class="form-check-label" for="instalacionesBuena">Buena</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesMedia" value="Media" />
+                <label class="form-check-label" for="instalacionesMedia">Media</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesDeficiente" value="Deficiente" />
+                <label class="form-check-label" for="instalacionesDeficiente">Deficiente</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="instalaciones" id="instalacionesMala" value="Mala" />
+                <label class="form-check-label" for="instalacionesMala">Mala</label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="observacion" class="form-label">
+                <strong>Escriba alguna observación</strong>
+              </label>
+              <textarea id="observacion" name="observacion" class="form-control" rows="6" placeholder="Escriba su mensaje"></textarea>
+            </div>
+          </div>
+          <div class="text-center pt-5">
+            <button type="submit" class="btn btn-primary px-5">Enviar respuesta</button>
+          </div>
+        </form>
       </div>
       <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
          <div class="modal-dialog">
@@ -268,7 +262,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                </div>
                <div class="modal-body" id="confirmBody">
-                  <!-- Aquí se mostrarán las respuestas seleccionadas -->
+
                </div>
                <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -282,7 +276,6 @@
          </div>
       </div>
    </main>
-
 
 
     <!-- FOOTER -->
@@ -359,8 +352,9 @@
 
 
     <script src="js/resenas/lightboxVideo.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/resenas/formEncuesta.js"></script>
-    <script src="js/contador/contador.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
