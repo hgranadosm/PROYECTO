@@ -1,12 +1,48 @@
-function ejecutar(div, video_id) {
-    var video = document.getElementById(video_id).src;
-    document.getElementById(video_id).src = video + '&autoplay=1';
-    document.getElementById(div).style.display = 'block';
+function ejecutar(lightboxId, videoId) {
+  document.getElementById(lightboxId).style.display = 'block';
+  var video = document.getElementById(videoId);
+  if (video) {
+    video.currentTime = 0;
+    video.play();
+  }
 }
 
-function ocultar(div, video_id) {
-    var video = document.getElementById(video_id).src;
-    var cleaned = video.replace('&autoplay=1', '');
-    document.getElementById(video_id).src = cleaned;
-    document.getElementById(div).style.display = 'none';
+function ocultar(lightboxId, videoId) {
+  document.getElementById(lightboxId).style.display = 'none';
+  var video = document.getElementById(videoId);
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+  }
 }
+
+(function() {
+  var style = document.createElement('style');
+  style.innerHTML = `
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 24px;
+      background: #fff;
+      color: #222;
+      border: none;
+      font-size: 2.2rem;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      z-index: 1001;
+      transition: background 0.2s, color 0.2s;
+    }
+    .lightbox-close:hover {
+      background: #ffd433;
+      color: #000;
+    }
+  `;
+  document.head.appendChild(style);
+})();
