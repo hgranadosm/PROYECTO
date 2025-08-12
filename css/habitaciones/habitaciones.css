@@ -146,6 +146,14 @@
     padding: 100px 0px 40px 0px;
 }
 
+
+.titulo-filtro1{
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0px 40px 0px
+}
+
 p{
     font-size: 14px;
     text-align: center;
