@@ -172,7 +172,6 @@
     top: calc(50% - 30px);
     width: 44px;
     height: 60px;
-    background-color: brown;
 }
 
 .baguetteBox-button {
@@ -212,7 +211,6 @@
     width: 30px;
     height: 30px;
     color: #fff;
-    background-color: brown;
 }
 
 .baguetteBox-button svg {

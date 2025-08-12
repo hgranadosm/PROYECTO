@@ -3,7 +3,26 @@
 emailjs.init("HKiIThGpeT7T6eLPK");
 
 function showError(title, html) {
-  Swal.fire({ icon: "error", title, html });
+  // Add spacing below each field in the error modal
+  const spacedHtml = html.replace(/<li>(.*?)<\/li>/g, '<li style="margin-bottom:12px;">$1</li>');
+  Swal.fire({
+    icon: "error",
+    title: '',
+    html: `<div style="background-color: transparent; color: #333; border-radius: 8px; padding: 18px; text-align: center; font-size: 1rem; font-weight: 500;">
+            <h3 style='font-size:1.3rem; font-weight:600; margin-bottom:18px;'>${title}</h3>
+            ${spacedHtml}
+        </div>`,
+    background: '#f1ebe3',
+    color: '#333',
+    customClass: {
+      popup: 'swal2-custom-popup',
+      title: 'swal2-custom-title',
+      htmlContainer: 'swal2-custom-html',
+      confirmButton: 'swal2-custom-confirm',
+    },
+    showConfirmButton: true,
+    confirmButtonText: 'Cerrar',
+  });
 }
 
 function getMissingFields() {
@@ -56,8 +75,21 @@ document.getElementById("formulario3").addEventListener("submit", async function
     await sendEmail();
     Swal.fire({
       icon: "success",
-      title: "¡Gracias!",
-      text: "Tu encuesta ha sido enviada exitosamente.",
+      title: '',
+      html: `<div style="background-color: transparent; color: #333; border-radius: 8px; padding: 18px; text-align: center; font-size: 1rem; font-weight: 500;">
+                <h3 style='font-size:1.3rem; font-weight:600; margin-bottom:18px;'>¡Gracias!</h3>
+                <span style='display:block; margin-bottom:12px;'>Tu encuesta ha sido enviada exitosamente.</span>
+            </div>`,
+      background: '#f1ebe3',
+      color: '#333',
+      customClass: {
+        popup: 'swal2-custom-popup',
+        title: 'swal2-custom-title',
+        htmlContainer: 'swal2-custom-html',
+        confirmButton: 'swal2-custom-confirm',
+      },
+      showConfirmButton: true,
+      confirmButtonText: 'Cerrar',
     });
     document.getElementById("formulario3").reset();
   } catch (err) {

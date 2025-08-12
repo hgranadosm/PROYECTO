@@ -51,6 +51,7 @@ p{
     color: #000;
     border-bottom: 1px solid #333;
     margin-bottom: 20px;
+    border-radius: 0px;
 }
 
 .form-control:focus {

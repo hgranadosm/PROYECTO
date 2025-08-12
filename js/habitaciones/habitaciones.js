@@ -243,19 +243,29 @@ function calcularHabitacion() {
     const total = habitacion ? habitacion.precio * noches : 0;
     if (habitacion) {
         Swal.fire({
-            title: 'Habitación seleccionada',
-            html: `<b>Grupo:</b> ${habitacion.grupo}<br>
-                   <b>Tipo:</b> ${tipoLabel(habitacion.tipo)}<br>
-                   <b>Vista:</b> ${vistaLabel(habitacion.vista)}<br>
-                   <b>Cama:</b> ${habitacion.cama}<br>
-                   <b>Precio por noche:</b> $${habitacion.precio}<br>
-                   <b>Fecha de entrada:</b> ${fechaEntradaVal}<br>
-                   <b>Fecha de salida:</b> ${fechaSalidaVal}<br>
-                   <b>Noches:</b> ${noches}<br>
-                   <b>Total estadía:</b> $${total}`,
-            imageUrl: habitacion.imagen,
-            imageWidth: 300,
-            imageAlt: `${tipoLabel(habitacion.tipo)} ${vistaLabel(habitacion.vista)} ${habitacion.grupo} ${habitacion.cama} $${habitacion.precio}`
+            title: '',
+            html: `<div style="background-color: transparent; color: #333; border-radius: 8px; padding: 18px; text-align: center; font-size: 1rem; font-weight: 500;">
+                <h3 style='font-size:1.3rem; font-weight:600; margin-bottom:18px;'>Habitación seleccionada</h3>
+                <b>Grupo:</b> ${habitacion.grupo}<br><br>
+                <b>Tipo:</b> ${tipoLabel(habitacion.tipo)}<br><br>
+                <b>Vista:</b> ${vistaLabel(habitacion.vista)}<br><br>
+                <b>Cama:</b> ${habitacion.cama}<br><br>
+                <b>Precio por noche:</b> $${habitacion.precio}<br><br>
+                <b>Fecha de entrada:</b> ${fechaEntradaVal}<br><br>
+                <b>Fecha de salida:</b> ${fechaSalidaVal}<br><br>
+                <b>Noches:</b> ${noches}<br><br>
+                <b>Total estadía:</b> $${total}
+            </div>`,
+            background: '#f1ebe3',
+            color: '#333',
+            customClass: {
+                popup: 'swal2-custom-popup',
+                title: 'swal2-custom-title',
+                htmlContainer: 'swal2-custom-html',
+                confirmButton: 'swal2-custom-confirm',
+            },
+            showConfirmButton: true,
+            confirmButtonText: 'Cerrar',
         });
     } else {
         Swal.fire('No se encontró información para la selección.');
