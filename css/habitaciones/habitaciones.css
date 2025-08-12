@@ -4,11 +4,17 @@
 }
 
 .servicio-icono {
-    font-size: 4rem;
-    color: #1976d2;
+    font-size: 30px;
+    color: #333;
+    margin-top: 10px;
     margin-bottom: 10px;
     transition: color 0.2s;
 }
+
+#servicios-tira:hover {
+    color: rgb(238, 190, 101)1;
+}
+
 
 .contenedor-buscador-barra{
     display: flex;
@@ -19,8 +25,8 @@
 
 .inputs input[type="date"] {
     appearance: none;
-    -webkit-appearance: none; /* Safari y Chrome */
-    -moz-appearance: none;    /* Firefox */
+    -webkit-appearance: none; 
+    -moz-appearance: none;   
     border: 1px solid #333;
     background-color: transparent;
     border-radius: 10px;
@@ -75,7 +81,6 @@
 
 #servicios-tira .item {
     width: 500px;
-    cursor: pointer;
     transition: 0.5s all;
     padding: 1em;
     background: transparent;
@@ -116,9 +121,6 @@
 #servicios-tira .item i {
     margin-bottom: 10px;
     transition: color 0.2s;
-}
-#servicios-tira .item:hover i {
-    color: #43b581;
 }
 
 .titulo-estancia{
