@@ -139,9 +139,21 @@ function validarFechasHabitacion() {
         const entrada = new Date(fechaEntrada.value);
         if (entrada < hoy) {
             Swal.fire({
-                title: 'Fecha de entrada inválida',
-                text: 'No puedes seleccionar una fecha de entrada anterior a hoy.',
-                icon: 'warning'
+                icon: "error",
+                title: '',
+                html: `<div style=\"background-color: transparent; color: #333; border-radius: 8px; padding: 18px; text-align: center; font-size: 1rem; font-weight: 500;\">
+                        <h3 style='font-size:1.3rem; font-weight:600; margin-bottom:18px;'>Fecha de entrada inválida</h3>
+                        <span style='display:block; margin-bottom:12px;'>No puedes seleccionar una fecha de entrada anterior a hoy.</span>
+                    </div>`,
+                background: '#f1ebe3',
+                color: '#333',
+                customClass: {
+                    popup: 'swal2-custom-popup',
+                    title: 'swal2-custom-title',
+                    confirmButton: 'swal2-custom-confirm',
+                },
+                showConfirmButton: true,
+                confirmButtonText: 'Cerrar',
             });
             fechaEntrada.value = '';
             renderCardsHabitaciones();
@@ -152,9 +164,21 @@ function validarFechasHabitacion() {
         const salida = new Date(fechaSalida.value);
         if (salida < hoy) {
             Swal.fire({
-                title: 'Fecha de salida inválida',
-                text: 'No puedes seleccionar una fecha de salida anterior a hoy.',
-                icon: 'warning'
+                icon: "error",
+                title: '',
+                html: `<div style=\"background-color: transparent; color: #333; border-radius: 8px; padding: 18px; text-align: center; font-size: 1rem; font-weight: 500;\">
+                        <h3 style='font-size:1.3rem; font-weight:600; margin-bottom:18px;'>Fecha de salida inválida</h3>
+                        <span style='display:block; margin-bottom:12px;'>No puedes seleccionar una fecha de salida anterior a hoy.</span>
+                    </div>`,
+                background: '#f1ebe3',
+                color: '#333',
+                customClass: {
+                    popup: 'swal2-custom-popup',
+                    title: 'swal2-custom-title',
+                    confirmButton: 'swal2-custom-confirm',
+                },
+                showConfirmButton: true,
+                confirmButtonText: 'Cerrar',
             });
             fechaSalida.value = '';
             renderCardsHabitaciones();
@@ -222,7 +246,22 @@ function calcularHabitacion() {
     const fechaEntradaVal = fechaEntrada && fechaEntrada.value ? fechaEntrada.value : null;
     const fechaSalidaVal = fechaSalida && fechaSalida.value ? fechaSalida.value : null;
     if (!tipo || !vista || !grupo || !cama || !precio) {
-        Swal.fire('Por favor seleccione grupo, tipo, vista, tipo de cama y precio de habitación');
+        Swal.fire({
+            icon: "error",
+            title: '',
+            html: `<div style="background-color: transparent; color: #333; border-radius: 8px; padding: 18px; text-align: center; font-size: 1rem; font-weight: 500;">
+                    <h3 style='font-size:1.3rem; font-weight:600; margin-bottom:18px;'>Le solicitamos amablemente que complete todas las opciones.</h3>
+                </div>`,
+            background: '#f1ebe3',
+            color: '#333',
+            customClass: {
+                popup: 'swal2-custom-popup',
+                title: 'swal2-custom-title',
+                confirmButton: 'swal2-custom-confirm',
+            },
+            showConfirmButton: true,
+            confirmButtonText: 'Cerrar',
+        });
         return;
     }
     if (!fechaEntradaVal || !fechaSalidaVal) {
