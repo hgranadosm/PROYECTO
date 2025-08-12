@@ -1,0 +1,142 @@
+
+/* ------------- PORTADA ------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../imagenes/bosque.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}   
+
+
+.contenido{
+    text-align: center;
+    color: white;
+}
+
+.contenido h1{
+    margin-bottom: 15px;
+}
+
+
+.contenido p{
+    margin-bottom: 30px;
+}
+
+.boton {
+    background-color:#9e9476;
+    text-decoration: none;
+    border: none;
+    padding: 10px 80px;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.5s;
+    font-size: 18px;
+}
+
+.boton:hover {
+    background-color: #dfd5b9;
+}
+    
+    
+/* ------------- TOUR ------------- */
+    
+#container_principal {
+    width: 2000px;
+    height: 650px;
+}
+    
+.cursor {
+    cursor: pointer;
+}
+    
+.fondo {
+    background-color: #006aea;
+}
+
+/* ------------- REGLAS ------------- */
+
+@media (max-width: 575px) {
+    #container_principal {
+        max-width: 100%;
+
+        position: relative;
+    }
+    iframe {
+        width: 100% !important;
+    }
+    footer {
+        position: relative;
+    }
+}
+
+@media (min-width: 576px) {
+    #container_principal {
+        max-width: 100%;
+        position: relative;
+    }
+    iframe {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    #container_principal {
+        max-width: 100%;
+        position: relative;
+    }
+    iframe {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    #container_principal {
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    iframe {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    #container_principal {
+        width: 2000px;
+        height: 700px;
+    }
+    header h1 {
+        display: flex;
+        justify-content: center;
+    }
+    footer h2 {
+        display: flex;
+        justify-content: center;
+    }
+    header {
+        width: 100% !important;
+    }
+    footer {
+        width: 100% !important;
+    }
+    iframe {
+        width: 640px !important;
+        height: 480px !important;
+    }
+}
