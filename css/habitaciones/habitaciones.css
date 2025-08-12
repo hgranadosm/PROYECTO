@@ -16,6 +16,22 @@
     margin-bottom: 40px;
 }
 
+
+.inputs input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none; /* Safari y Chrome */
+    -moz-appearance: none;    /* Firefox */
+    border: 1px solid #333;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.inputs input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(30%) sepia(20%) saturate(500%) hue-rotate(180deg);
+}
+
 .buscador-barra {
     display: flex;
     width: 40%;
@@ -251,9 +267,10 @@ p{
   transition: box-shadow 0.2s, border-color 0.2s;
   outline: none;
 }
+
 .inputs select:focus, .inputs input:focus {
   box-shadow: 0 4px 16px rgba(25,118,210,0.08);
-  border: 1px solid #1976d2;
+  border: 1px solid #333;
 }
 .inputs h4 {
   margin-bottom: 8px;

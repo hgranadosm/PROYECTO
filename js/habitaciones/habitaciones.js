@@ -6,6 +6,7 @@ function limpiarFiltros() {
     if (vistaSelect) vistaSelect.value = '';
     if (fechaEntrada) fechaEntrada.value = '';
     if (fechaSalida) fechaSalida.value = '';
+    localStorage.removeItem('habitacionesFiltros');
     renderCardsHabitaciones();
 }
 const habitacionesDB = window.habitacionesDB;
@@ -21,6 +22,49 @@ const imagen = document.getElementById('imagenHabitacion');
 
 
 document.addEventListener('DOMContentLoaded', renderCardsHabitaciones);
+function guardarFiltrosEnLocalStorage() {
+    const filtros = {
+        precio: precioSelect && precioSelect.value ? precioSelect.value : '',
+        cama: camaSelect && camaSelect.value ? camaSelect.value : '',
+        grupo: grupoSelect && grupoSelect.value ? grupoSelect.value : '',
+        tipo: tipoSelect && tipoSelect.value ? tipoSelect.value : '',
+        vista: vistaSelect && vistaSelect.value ? vistaSelect.value : '',
+        fechaEntrada: fechaEntrada && fechaEntrada.value ? fechaEntrada.value : '',
+        fechaSalida: fechaSalida && fechaSalida.value ? fechaSalida.value : ''
+    };
+    localStorage.setItem('habitacionesFiltros', JSON.stringify(filtros));
+}
+
+function cargarFiltrosDesdeLocalStorage() {
+    const filtros = JSON.parse(localStorage.getItem('habitacionesFiltros'));
+    if (!filtros) return;
+    if (precioSelect) precioSelect.value = filtros.precio || '';
+    if (camaSelect) camaSelect.value = filtros.cama || '';
+    if (grupoSelect) grupoSelect.value = filtros.grupo || '';
+    if (tipoSelect) tipoSelect.value = filtros.tipo || '';
+    if (vistaSelect) vistaSelect.value = filtros.vista || '';
+    if (fechaEntrada) fechaEntrada.value = filtros.fechaEntrada || '';
+    if (fechaSalida) fechaSalida.value = filtros.fechaSalida || '';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    cargarFiltrosDesdeLocalStorage();
+    renderCardsHabitaciones();
+});
+
+function addFiltroListener(element) {
+    element && element.addEventListener('change', () => {
+        guardarFiltrosEnLocalStorage();
+        renderCardsHabitaciones();
+    });
+}
+addFiltroListener(precioSelect);
+addFiltroListener(camaSelect);
+addFiltroListener(grupoSelect);
+addFiltroListener(tipoSelect);
+addFiltroListener(vistaSelect);
+addFiltroListener(fechaEntrada);
+addFiltroListener(fechaSalida);
 precioSelect && precioSelect.addEventListener('change', renderCardsHabitaciones);
 camaSelect && camaSelect.addEventListener('change', renderCardsHabitaciones);
 grupoSelect && grupoSelect.addEventListener('change', renderCardsHabitaciones);
