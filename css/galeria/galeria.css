@@ -1,8 +1,72 @@
+/* Estilos para combos de paisajes y horarios */
+.combo-doble-section {
+    background: transparent;
+    padding: 18px 0 0 0;
+}
+
+#comboPaisaje, #comboHorario {
+    width: 320px;
+  max-width: 90vw;
+  display: block;
+  padding: 12px 18px;
+  font-size: 18px;
+  border: none;
+  color: #333;
+  border: 1px solid #333;
+  background: transparent;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+#comboPaisaje:hover, #comboHorario:hover, #comboPaisaje:focus, #comboHorario:focus {
+    border-color: #333;
+    background: transparent;
+    box-shadow: 0 0 0 2px rgba(139,0,0,0.08);
+}
+
+.combo-doble-section label {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
 .titulo-galeria{
     font-weight: bold;
     font-size: 60px;
     padding: 100px 0px 50px 0px;
 }
+
+.frase-servicios{
+  padding: 100px 0px 40px 0px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frase-servicios h2{
+    font-family: 'EditorialOld';
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+
+.contenedor-combo1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  margin: 0 !important;
+  width: 100vw;
+  min-height: 60vh;
+  box-sizing: border-box;
+}
+
 
 #opciones {
     text-align: center;

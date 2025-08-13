@@ -4,7 +4,6 @@ window.onload = function() {
         inputBusqueda.addEventListener('keypress', validarEnterServicio);
         inputBusqueda.addEventListener('input', filtrarServiciosTira);
     }
-// Filtrado en tiempo real de servicios/amenidades en el carrusel
 function filtrarServiciosTira() {
     var searchValue = document.getElementById('searchInput').value.toLowerCase();
     var serviciosTira = document.getElementById('servicios-tira');

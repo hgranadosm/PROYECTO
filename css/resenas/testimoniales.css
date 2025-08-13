@@ -4,6 +4,61 @@
     color: #000;
 }
 
+.contenedor-buscador-barra {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+
+.buscador-barra {
+    display: flex;
+    width: 40%;
+    background: transparent;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 2rem;
+    padding: 10px ;
+}
+.buscador-barra input {
+    border: none;
+    background: transparent;
+    justify-content: center;
+    outline: none;
+    font-size: 1.3rem;
+    color: #333;
+    flex: 1;
+    padding-left: 0.5rem;
+}
+
+.buscador-barra .searchIcon {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.3rem;
+    padding: 0;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.buscador-barra input::placeholder {
+    color: #333;
+    opacity: 1;
+}
+
+.searchInput::placeholder {
+    color: #fff;
+    font-size: 14px;
+}
+.searchIcon {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+    border-right: 2px solid #fff;
+}
+.searchIcon i {
+    display: flex;
+    padding: 5px 10px;
+}
 
 .titulo1-resena{
     color: #333;
@@ -28,7 +83,7 @@
     text-align: center;
     font-size: 14px;
     margin-top: 40px;
-    padding: 0 60px 0 80px;
+    padding:0 30px 0 30px;
 }
 
 .titulo-alrededores-1{

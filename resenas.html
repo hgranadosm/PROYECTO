@@ -11,6 +11,7 @@
     <link href="css/inicio.css" rel="stylesheet">
     <link rel="stylesheet" href="css/resenas/testimoniales.css">
     <link rel="stylesheet" href="css/resenas/formEncuesta.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
     integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
@@ -22,8 +23,6 @@
 </head>
 
 <body>
-
-
     <!--HEADER-->
     <header>
         <div class="contenedor-header">
@@ -54,7 +53,6 @@
     <!--FIN HEADER-->
 
 
-
     <div class="resena-contenedor1">
         <h2 class="titulo-alrededores-resena"><span class="span">Lo que dicen nuestros huéspedes</span></h2>
         <p class="pb-3 parrafo-alrededores-resena">"En el Hotel de Montaña Brisa del Bosque, cada experiencia es única.
@@ -64,15 +62,23 @@
 
     </div>
 
+     <!-- Buscador textual de reseñas por nombre -->
+  <div class="contenedor-buscador-barra">
+    <div class="buscador-barra mt-4">
+      <button class="searchIcon" type="button" onclick="searchResenas()">
+        <i class="ri-search-line"></i>
+      </button>
+      <input type="text" id="searchResenaInput" class="searchInput" placeholder="Buscar reseñas por nombre...">
+    </div>
+    <p id="pResenaResult" class="resultado mt-4"></p>
+  </div>
+
 
     <section class="">
-        <div class="container-sm-6 pt-5">
+        <div class="container-sm-6 pt-1">
 
             <div class="testimonials_container">
 
-                <!-- web avatars: https://www.freepik.es/search?format=search&query=avatars&type=vector -->
-
-                <!-- owl-theme centra las flechas de una vez-->
                 <div class="testimonials owl-carousel owl-theme">
                     <div class="item">
                         <img src="img/resenas/1.jpg" alt="">
@@ -334,7 +340,7 @@
 
             dots: true,
 
-            autoplay: true,
+            autoplay: false,
 
             responsive: {
                 0: {
@@ -352,6 +358,7 @@
 
 
     <script src="js/resenas/lightboxVideo.js"></script>
+    <script src="js/resenas/buscadorTextualResenas.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/resenas/formEncuesta.js"></script>
